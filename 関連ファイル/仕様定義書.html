@@ -6,6 +6,27 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
+        <h1>変遷</h1>
+        <p>PhysRevB.78.140405 (1).pdfのFIG2の再現を行う</p>
+        <figure>
+            <img src = "./image/スクリーンショット 2025-06-25 115038.png">
+            <figcaption>論文内の再現したいグラフ</figcaption>
+        </figure>
+        <p>このグラフ内のグラフにおけるN=21,N=24の再現に挑む。S<sub>TOT</sub><sup>Z</sup>-最小エネルギー固有値のグラフの傾きを1/Nを横軸にプロットしたものが、この図である。
+        N=21では0.175,N=24では0.15程度になるはずである。</p>
+        <p>20250712の現状</p>
+        <p>./../output/N=21_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
+        <figure>
+            <img src = "./image/スクリーンショット 2025-07-12 075343.png">
+            <figcaption>論文内の再現したいグラフ(N=21)</figcaption>
+        </figure>
+        <p>./../output/N=24_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
+        <figure>
+            <img src = "./image/スクリーンショット 2025-07-12 075352.png">
+            <figcaption>論文内の再現したいグラフ(N=24)</figcaption>
+        </figure>
+        <p>どちらも、傾きが大きく出てしまっている。系の設定なのか、ロジックが違うのか。とりあえずは教授作成のTITPACKと比較検討を進めることとする。
+        </p>
         <h1>バージョンについて</h1>
         <p>本件のソースは全5バージョン存在する</p>
         <table>
