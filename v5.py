@@ -19,7 +19,7 @@ class Site():
         return f"Site(id={self.id},bond = {self.bond},mod = {self.mod})"
 #定数***********************************
 bond_mod_J = 1
-bond_mod_D = -0.1
+bond_mod_D = 0.1
 accuracy = 1e-2 #精度
 Sites = []
 SITE_NUM = 0
