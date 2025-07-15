@@ -36,7 +36,7 @@ bond_mod_D = 0.1
 accuracy = 1e-2 #精度
 Sites = []
 SITE_NUM = 0
-inputFile = "N=18_test"
+inputFile = "N=21"
 #変数********************************
 #Stateの配列
 States = []
