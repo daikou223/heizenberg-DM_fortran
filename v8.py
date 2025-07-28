@@ -2,7 +2,8 @@ import numpy as np
 from itertools import combinations
 import math
 import datetime
-from scipy.sparse.linalg import LinearOperator, eigsh
+from scipy.sparse.linalg import lobpcg,LinearOperator, eigsh
+import os
 
 
 #クラス定義***************************
@@ -69,12 +70,22 @@ def Hamil(vecData):
                 print("この状態はないよ")
     return ret_hamil
 
+def realyOper(vec):
+    return inplod(vec,Hamil(vec))
+
+def nableRealy(vec,r):
+    return 2*(Hamil(vec)-r*vec)
+
+def inplod(vec1,vec2):
+    inplod_ = np.vdot(vec1, vec2)
+    return inplod_
+    
 def main():
-    global SITE_NUM,States,idToInd
+    global SITE_NUM,States,idToInd,loopcounter
     #inputfileからの読み込み
     setter()
     #出力ファイルの準備
-    logFile = open(f"./output/{inputFile}_J={bond_mod_J}_D={bond_mod_D}.txt","w")
+    logFile = open(f"./output/{os.path.basename(__file__)}_{inputFile}_J={bond_mod_J}_D={bond_mod_D}.txt","w")
     logFile.write("S_Z^2,E/j\n")
     #アップスピンとダウンスピンの数の差分DIFF_UP_DOWN_SPINに対して最低Eを取る(E(-1) = E(1))より、半分は割愛
     #DIFF_UP_DUWN_SPIN=SITE_NUMのときはすべてのスピンがそろっているので、基底になりえないから割愛
@@ -95,13 +106,44 @@ def main():
             States.append(spins)
             idToInd[spins] = StateInd
             StateInd += 1
-        hamilton_matrix = LinearOperator(
-            shape=(ALL_STATE_NUM, ALL_STATE_NUM),
-            matvec=Hamil,
-            dtype=np.complex128
-        )
-        vals, vecs = eigsh(hamilton_matrix, k=1, which='SA') 
-        print(f'MIN_ENEGY is {vals[0]}')
+        X = np.random.rand(ALL_STATE_NUM, )
+        Attenuation = min(10/ALL_STATE_NUM,0.01)
+        X = X/inplod(X,X)**0.5
+        beforeR = float("inf")
+        r = 0
+        loopcount = 0
+        dispind = 0
+        while 1:
+            beforeR = r
+            r = realyOper(X)
+            nablaR = nableRealy(X,r)
+            #二部探索を行う
+            maxAttenuation = 1
+            minAttenuation = 0
+            while maxAttenuation-minAttenuation > 10**-6:
+                Attenuation = (maxAttenuation+minAttenuation)/2
+                DAttenuation = (maxAttenuation+minAttenuation)/2+10**-8
+                newX = X-Attenuation*nablaR
+                DnewX = X-DAttenuation*nablaR
+                newX = newX/(inplod(newX,newX))**0.5
+                DnewX = DnewX/(inplod(DnewX,DnewX))**0.5
+                newR = realyOper(newX)
+                DnewR = realyOper(DnewX)
+                gradient = (DnewR - newR) / (DAttenuation - Attenuation)
+                if(gradient > 0):
+                    maxAttenuation = Attenuation
+                else:
+                    minAttenuation = Attenuation
+            X = newX
+            loopcount += 1
+            if(loopcount == 2**dispind):
+                print(Attenuation)
+                print((beforeR-r).real,r.real,inplod(nablaR,nablaR).real,dispind)
+                dispind += 1
+            if(inplod(nablaR,nablaR).real < 10**-6):
+                break
+        print(f"MINENEGY = {r.real}")
+        logFile.write(f"{(DIFF_UP_DOWN_SPIN/2)**2},{r.real}\n")
         print(datetime.datetime.now()-startTime)
     logFile.close()
 
