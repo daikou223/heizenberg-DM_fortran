@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="jp">
     <head>
         <meta charset="UTF-8" />
@@ -9,332 +9,242 @@
         <h1>変遷</h1>
         <p>PhysRevB.78.140405 (1).pdfのFIG2の再現を行う</p>
         <figure>
-            <img src = "./image/スクリーンショット 2025-06-25 115038.png">
+            <img src="./image/スクリーンショット 2025-06-25 115038.png" />
             <figcaption>論文内の再現したいグラフ</figcaption>
         </figure>
-        <p>このグラフ内のグラフにおけるN=21,N=24の再現に挑む。S<sub>TOT</sub><sup>Z</sup>-最小エネルギー固有値のグラフの傾きを1/Nを横軸にプロットしたものが、この図である。
-        N=21では0.175,N=24では0.15程度になるはずである。</p>
+        <p>
+            このグラフ内のグラフにおけるN=21,N=24の再現に挑む。S<sub>TOT</sub
+            ><sup>Z</sup>-最小エネルギー固有値のグラフの傾きを1/Nを横軸にプロットしたものが、この図である。
+            N=21では0.175,N=24では0.15程度になるはずである。
+        </p>
         <p>20250712の現状</p>
         <p>./../output/N=21_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
         <figure>
-            <img src = "./image/スクリーンショット 2025-07-12 075343.png">
+            <img src="./image/スクリーンショット 2025-07-12 075343.png" />
             <figcaption>論文内の再現したいグラフ(N=21)</figcaption>
         </figure>
         <p>./../output/N=24_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
         <figure>
-            <img src = "./image/スクリーンショット 2025-07-12 075352.png">
+            <img src="./image/スクリーンショット 2025-07-12 075352.png" />
             <figcaption>論文内の再現したいグラフ(N=24)</figcaption>
         </figure>
-        <p>どちらも、傾きが大きく出てしまっている。系の設定なのか、ロジックが違うのか。とりあえずは教授作成のTITPACKと比較検討を進めることとする。
+        <p>
+            どちらも、傾きが大きく出てしまっている。系の設定なのか、ロジックが違うのか。とりあえずは教授作成のTITPACKと比較検討を進めることとする。
         </p>
         <h1>バージョンについて</h1>
-        <p>本件のソースは全5バージョン存在する</p>
+        <p>本件のソースは以下のバージョン存在する</p>
         <table>
-            <tr><th>バージョン</th><th>仕様</th></tr>
-            <tr><td>v1.py</td><td>全状態2<sup>N</sup>についてハミルトニアンを構成する</td></tr>
-            <tr><td>v2.py</td><td>v1に対して疎行列によるアプローチを追加&rarr; 頓挫</td></tr>
-            <tr><td>v3.py</td><td>全状態ではなくZ<sub>tot</sub>で分割し、計算量の削減</td></tr>
-            <tr><td>v4.py</td><td>v3に対して、疎行列アプローチを導入,外部ファイル出力も導入</td></tr>
-            <tr><td>v5.py</td><td>v4のメモリ削減、高速化を行った</td></tr>
+            <tr>
+                <th>バージョン</th>
+                <th>仕様</th>
+            </tr>
+            <tr>
+                <td>v1.py</td>
+                <td>全状態2<sup>N</sup>についてハミルトニアンを構成する</td>
+            </tr>
+            <tr>
+                <td>v2.py</td>
+                <td>v1に対して疎行列によるアプローチを追加&rarr; 頓挫</td>
+            </tr>
+            <tr>
+                <td>v3.py</td>
+                <td>全状態ではなくZ<sub>tot</sub>で分割し、計算量の削減</td>
+            </tr>
+            <tr>
+                <td>v4.py</td>
+                <td>v3に対して、疎行列アプローチを導入,外部ファイル出力も導入</td>
+            </tr>
+            <tr>
+                <td>v5.py</td>
+                <td>v4のメモリ削減、高速化を行った</td>
+            </tr>
+            <tr>
+                <td>v6.py</td>
+                <td>線形演算子を導入し、ハミルトニアンの保持を行わないように実装</td>
+            </tr>
+            <tr>
+                <td>v7.py</td>
+                <td>線形演算子は遅かったのでキャッシュを導入(あまり高速にならなかった)</td>
+            </tr>
+            <tr>
+                <td>v8.py</td>
+                <td>
+                    レイリー商を導入し、自力で最小固有値を求められるようにした(一部は高速化したが、パラメーターの最適化が困難)
+                </td>
+            </tr>
+            <tr>
+                <td>v9.py</td>
+                <td>
+                    <a href="研究報告250606.pdf">先行研究</a
+                    >のH<sub>1</sub>のハミルトニアン生成を導入、高速化けが得られた
+                </td>
+            </tr>
         </table>
-        <p>v5はv4にビット演算、目盛り節約を組んだだけなので、ロジックはv4と等しいので、v4で解説することとする</p>
         <h1>系の解説</h1>
         <h2>サイト数：21の系</h2>
         <figure>
-        <img src = "image/1000000369.png"/>
+            <img src="image/1000000369.png" />
             <figcaption>N=21のときのサイトの様子</figcaption>
         </figure>
-        <p>各サイトに対して0~20までの番号と矢印で結合を表している。結合は<a href = "../input/N=21.txt">input/N=21.txt</a>で定義されている</p>
+        <p>
+            各サイトに対して0~20までの番号と矢印で結合を表している。結合は<a href="../input/N=21.txt">input/N=21.txt</a
+            >で定義されている
+        </p>
         <h1>物理理論</h1>
         <p>本件でのハミルトニアンは以下のように定義される</p>
-        \begin{align}
-        \mathscr{H} &= J\sum_{i,j}\boldsymbol{S}_{i}\cdot\boldsymbol{S}_j + \sum_{i,j} D_{i,j}\cdot(\boldsymbol{S}_i\times\boldsymbol{S}_j)\\
-        &= J\sum_{i,j}
-        S_i^xS_j^x+
-        S_i^yS_j^y+
-        S_i^zS_j^z
-        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x)
-        \end{align}
+        \begin{align} \mathscr{H} &= J\sum_{i,j}\boldsymbol{S}_{i}\cdot\boldsymbol{S}_j + \sum_{i,j}
+        D_{i,j}\cdot(\boldsymbol{S}_i\times\boldsymbol{S}_j)\\ &= J\sum_{i,j} S_i^xS_j^x+ S_i^yS_j^y+ S_i^zS_j^z
+        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x) \end{align}
         <p>ここで昇降演算子を定義し、\(S^x,S^y\)を頑張る</p>
-        \begin{align}
-            S^{+} = S^x + i S^y\\
-            S^{-} = S^x - i S^y\\
-        \end{align}
+        \begin{align} S^{+} = S^x + i S^y\\ S^{-} = S^x - i S^y\\ \end{align}
         <p>したがって</p>
-        \begin{align}
-            S^x = \frac{S^+ + S^-}{2}\\
-            S^y = \frac{S^+ - S^-}{2i}\\
-            S^z = i[S_x,S_y] = -\frac{1}{2}[S^+,S^-]\\
-        \end{align}
+        \begin{align} S^x = \frac{S^+ + S^-}{2}\\ S^y = \frac{S^+ - S^-}{2i}\\ S^z = i[S_x,S_y] =
+        -\frac{1}{2}[S^+,S^-]\\ \end{align}
         <p>スピン演算子の積をまとめる</p>
-        \begin{align}
-        S_i^xS_j^x &=\frac{1}{4}(S_i^++S_i^-)(S_j^++S_j^-)\\
-        &= \frac{1}{4}(S_i^+S_j^+ + S_i^+S_j^- + S_i^-S_j^+ + S_i^-S_j^-)\\
-        S_i^yS_j^y &=-\frac{1}{4}(S_i^+-S_i^-)(S_j^+-S_j^-)\\
-        &= \frac{1}{4}(-S_i^+S_j^+ + S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\
-        S_i^xS_j^y &=\frac{1}{4i}(S_i^++S_i^-)(S_j^+-S_j^-)\\
-        &= \frac{1}{4i}(S_i^+S_j^+ - S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\
-        S_i^yS_j^x &=\frac{1}{4i}(S_i^+-S_i^-)(S_j^++S_j^-)\\
-        &= \frac{1}{4i}(S_i^+S_j^+ + S_i^+S_j^- - S_i^-S_j^+ - S_i^-S_j^-)\\
+        \begin{align} S_i^xS_j^x &=\frac{1}{4}(S_i^++S_i^-)(S_j^++S_j^-)\\ &= \frac{1}{4}(S_i^+S_j^+ + S_i^+S_j^- +
+        S_i^-S_j^+ + S_i^-S_j^-)\\ S_i^yS_j^y &=-\frac{1}{4}(S_i^+-S_i^-)(S_j^+-S_j^-)\\ &= \frac{1}{4}(-S_i^+S_j^+ +
+        S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\ S_i^xS_j^y &=\frac{1}{4i}(S_i^++S_i^-)(S_j^+-S_j^-)\\ &=
+        \frac{1}{4i}(S_i^+S_j^+ - S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\ S_i^yS_j^x
+        &=\frac{1}{4i}(S_i^+-S_i^-)(S_j^++S_j^-)\\ &= \frac{1}{4i}(S_i^+S_j^+ + S_i^+S_j^- - S_i^-S_j^+ - S_i^-S_j^-)\\
         \end{align}
         <p>それぞれの和に関してもまとめておく</p>
-        \begin{align}
-        S_i^xS_j^x + S_i^yS_j^y = \frac{1}{2}(S_i^+S_j^- + S_i^-S_j^+)\\
-        S_i^xS_j^y-S_i^yS_j^x = \frac{1}{2i}(-S_i^+S_j^- + S_i^-S_j^+)\\
-        \end{align}
+        \begin{align} S_i^xS_j^x + S_i^yS_j^y = \frac{1}{2}(S_i^+S_j^- + S_i^-S_j^+)\\ S_i^xS_j^y-S_i^yS_j^x =
+        \frac{1}{2i}(-S_i^+S_j^- + S_i^-S_j^+)\\ \end{align}
         <p>これをハミルトニアンに適用する</p>
-        \begin{align}
-         \mathscr{H} &= J\sum_{i,j}
-        (S_i^xS_j^x+
-        S_i^yS_j^y+
-        S_i^zS_j^z)
-        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x)\\
-        &= \frac{J}{2}\sum_{i,j}(S_i^+S_j^- + S_i^-S_j^+) + \frac{J}{4}\sum_{i,j}[S_i^+,S_i^-][S_j^+,S_j^-]\\
-        & + \sum_{i,j}\frac{D_{i,j}}{2i}(-S_i^+S_j^-+S_i^{-}S_j^+)
+        \begin{align} \mathscr{H} &= J\sum_{i,j} (S_i^xS_j^x+ S_i^yS_j^y+ S_i^zS_j^z)
+        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x)\\ &= \frac{J}{2}\sum_{i,j}(S_i^+S_j^- + S_i^-S_j^+) +
+        \frac{J}{4}\sum_{i,j}[S_i^+,S_i^-][S_j^+,S_j^-]\\ & + \sum_{i,j}\frac{D_{i,j}}{2i}(-S_i^+S_j^-+S_i^{-}S_j^+)
         \end{align}
         <h2>第一項</h2>
-        <p>i番目とj番目のスピン状態を|&sigma;<sub>i</sub>&sigma;<sub>j</sub>&rang;のケットで表し、第一項に適用すると以下の表になる</p>
+        <p>
+            i番目とj番目のスピン状態を|&sigma;<sub>i</sub>&sigma;<sub>j</sub>&rang;のケットで表し、第一項に適用すると以下の表になる
+        </p>
         <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>0</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>\(\frac{J}{2}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>\(\frac{J}{2}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>0</td></tr>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>\(\frac{J}{2}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>\(\frac{J}{2}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>0</td>
+            </tr>
         </table>
         <h2>第二項</h2>
         <p>同様に以下の表</p>
         <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>\(\frac{J}{4}\)|&uarr;&uarr;&rang;</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>-\(\frac{J}{4}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>-\(\frac{J}{4}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>\(\frac{J}{4}\)|&darr;&darr;&rang;</td></tr>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>\(\frac{J}{4}\)|&uarr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>-\(\frac{J}{4}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>-\(\frac{J}{4}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>\(\frac{J}{4}\)|&darr;&darr;&rang;</td>
+            </tr>
         </table>
         <h2>第三項</h2>
         <p>同様に以下の表</p>
         <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>0</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>\(\frac{D_{ij}}{2i}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>-\(\frac{D_{ij}}{2i}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>0</td></tr>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>\(\frac{D_{ij}}{2i}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>-\(\frac{D_{ij}}{2i}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>0</td>
+            </tr>
         </table>
-        <h1>コード全容</h1>
-        <p>まずは定数部分から見ていく</p>
-<pre>
-<code>
-#定数***********************************
-bond_mod_J = 1
-bond_mod_D = 0.1
-accuracy = 1e-2 #精度
-Sites = []
-SITE_NUM = 0
-inputFile = "N=21"
-</code>
-</pre>
-        <h2>オブジェクト定義</h2>
-        <h3>サイト状態</h3>
-        <pre>
-#クラス定義***************************
-class Site():
-    def __init__(self,Id,bond,mod):
-        self.id = Id
-        self.bond = bond
-        self.mod = mod
-        </pre>
-        <p>例えば0番サイトの情報はid=0,bond=[7,20],mod=[-1,+1]である</p>
-        <h3>状態</h3>
-        <pre>
-class State():
-    def __init__(self,data):
-        #dataは0,1配列でdata[i]はId=iのサイトの1,0を表す
-        self.data = data
-        Id = 0
-        for spin in self.data:
-            Id = Id*2+spin
-        self.id = Id
-</pre>
-        <p>これはスピン状態を捕獲しておくものであり、dataはサイトの数(21)個の要素の配列であり、各要素は0or1になる.Idはdataを二進数だと思ったときに与えられる整数である。有用性はあとで。</p>
-        <h2>メイン関数</h2>
-        <pre>
-#inputfileからの読み込み
-setter()
-SITE_NUM = len(Sites)
-min_enegy = float("inf")
-#全S_TOTに対して最低Eを取る(E(-1) = E(1))より、半分は割愛
-for S_TOT in range(SITE_NUM,-1,-2):
-    #状態と逆変換を初期化
-    States.clear()
-    idToInd.clear()
-    StateInd = 0
-    #状態と逆変換を列挙
-    for ups in combinations(range(SITE_NUM),(S_TOT+SITE_NUM)//2):
-        #全部を下向き
-        spins = [0]*SITE_NUM
-        #選ばれたものを上向き
-        for site in ups:
-            spins[site] = 1
-        #そんなものを配列に捕獲
-        States.append(State(spins))
-        #Idとからindexを高速に計算できるように
-        idToInd[State(spins).id] = StateInd
-        StateInd += 1
-    dataDict = {}
-    #ハミルトニアン形成{(元のId,変換後のID) = 係数}
-    for state in States:
-        #Hamilから帰ってくるデータは[[適用後スピンのStateオブジェクト,係数],...]
-        col_data = Hamil(state)
-        rowId = idToInd[state.id]
-        for _col,_data in col_data:
-            colId = idToInd[_col.id]
-            if((rowId,colId) in dataDict):
-                dataDict[(rowId,colId)] += _data
-            else:
-                dataDict[(rowId,colId)] = _data
-    #疎行列用にコンバート
-    max_nnz = len(dataDict)
-    rows = np.empty(max_nnz, dtype=int)
-    cols = np.empty(max_nnz, dtype=int)
-    datas = np.empty(max_nnz, dtype=complex)
-    ptr = 0
-    for key,data in dataDict.items():
-        rows[ptr] = key[0]
-        cols[ptr] = key[1]
-        datas[ptr] = data
-        ptr += 1
-    print("create list data")
-    #結局ハミルトニアンが小さいなら蜜行列を使った方が早いので実装
-    if(ALL_STATE_NUM &lt;= 100):
-        hamil = coo_matrix((datas, (rows, cols)), shape=(ALL_STATE_NUM, ALL_STATE_NUM)).tocsr()
-        eigvals, eigvecs = eig(hamil.toarray())
-        mineigval = float("inf")
-        for enegy in eigvals:
-            mineigval = min(mineigval,enegy.real)
-        min_enegy = min(min_enegy,mineigval) 
-        print(S_TOT,"環境下での最小実部の固有値:", math.floor(mineigval/accuracy*10)*accuracy/10)
-    #疎行列の時はこっち
-    else:
-        hamil = coo_matrix((datas, (rows, cols)), shape=(ALL_STATE_NUM, ALL_STATE_NUM)).tocsr()
-        eigvals, eigvecs = eigs(hamil, k=1, which='SR',tol=accuracy)
-        mineigval = float("inf")
-        for enegy in eigvals:
-            mineigval = min(mineigval,enegy.real)
-        min_enegy = min(min_enegy,mineigval) 
-        print(S_TOT,"環境下での最小実部の固有値:", math.floor(mineigval/accuracy*10)*accuracy/10)
-    logFile.write(f"{(S_TOT/2)**2},{eigvals[0].real}\n")
-print("全ての状態での最小エネルギー:",min_enegy)
-        </pre>
-        <h2>第一項(x,yの内積)</h2>
-        <p>さっきの表を再現すればよい。下に再掲</p>
-        <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>0</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>\(\frac{J}{2}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>\(\frac{J}{2}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>0</td></tr>
-        </table>
-<pre>
-def xyprod(state):
-    ans = []
-    spins = state.data
-    for site in range(SITE_NUM):
-        for bond_site in Sites[site].bond:
-            copy_spins = spins.copy()
-            if(copy_spins[site] != copy_spins[bond_site]):
-                copy_spins[site],copy_spins[bond_site] = copy_spins[bond_site],copy_spins[site]
-                modified_state = States[idToInd[spinToId(copy_spins)]]
-                ans.append([modified_state,1/2*bond_mod_J])
-    return ans
-</pre>
-        <h2>第二項(zの内積)</h2>
-        <p>さっきの表を再現すればよい。下に再掲</p>
-        <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>\(\frac{J}{4}\)|&uarr;&uarr;&rang;</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>-\(\frac{J}{4}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>-\(\frac{J}{4}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>\(\frac{J}{4}\)|&darr;&darr;&rang;</td></tr>
-        </table>
-<pre>
-def zprod(state):
-    ans = []
-    spins = state.data
-    for site in range(SITE_NUM):
-        for bond_site in Sites[site].bond:
-            mag = 1
-            if(spins[site] == 1):
-                mag *= 1/2
-            else:
-                mag *= -1/2
-            if(spins[bond_site] == 1):
-                mag *= 1/2
-            else:
-                mag *= -1/2
-            ans.append([state,mag*bond_mod_J])
-    return ans
-</pre>
- <h2>第三項(外積)</h2>
-        <p>さっきの表を再現すればよい。下に再掲</p>
-        <table>
-            <tr><th>もとの状態</th><th>遷移後の状態</th></tr>
-            <tr><td>|&uarr;&uarr;&rang;</td><td>0</td></tr>
-            <tr><td>|&uarr;&darr;&rang;</td><td>\(\frac{D_{ij}}{2i}\)|&darr;&uarr;&rang;</td></tr>
-            <tr><td>|&darr;&uarr;&rang;</td><td>-\(\frac{D_{ij}}{2i}\)|&uarr;&darr;&rang;</td></tr>
-            <tr><td>|&darr;&darr;&rang;</td><td>0</td></tr>
-        </table>
-<pre>
-def outProd(state):
-    ans = []
-    spins = state.data
-    conv = {(1,0):1j/2,(0,1):-1j/2}
-    for site in range(SITE_NUM):
-        for bond_ind in range(len(Sites[site].bond)):
-            copy_spins = spins.copy()
-            if(copy_spins[site] != copy_spins[Sites[site].bond[bond_ind]]):
-                copy_spins[site],copy_spins[Sites[site].bond[bond_ind]] = copy_spins[Sites[site].bond[bond_ind]],copy_spins[site]
-                modified_state = States[idToInd[spinToId(copy_spins)]]
-                ans.append([modified_state,conv[(spins[site],spins[Sites[site].bond[bond_ind]])]*Sites[site].mod[bond_ind]])
-    return ans
-</pre>       
         <h2>ハミルトニアン</h2>
-        <p>第1項から第3項をまとめるだけ</p>
-<pre>
-def Hamil(state):
-    in_prod_ans = inProd(state)
-    out_prod_ans = outProd(state)
-    return in_prod_ans + out_prod_ans
-#内積
-def inProd(state):
-    ans = []
-    x_ans = xyprod(state)
-    ans += x_ans
-    z_ans = zprod(state)
-    ans += z_ans
-    return ans
-</pre>
+        <p>第1項から3項の結果をまとめる</p>
+        <table>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>\begin{align}\frac{1}{4}J|&uarr;&uarr;&rang; \end{align}</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>
+                    \begin{align} -\frac{1}{4}J|&uarr;&darr;&rang; + (\frac{1}{2}J -
+                    \frac{1}{2}iD_{ij})|&darr;&uarr;&rang; \end{align}
+                </td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>
+                    \begin{align} -\frac{1}{4}J|&darr;&uarr;&rang; + (\frac{1}{2}J +
+                    \frac{1}{2}iD_{ij})|&uarr;&darr;&rang; \end{align}
+                </td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>\begin{align} \frac{1}{4}J|&darr;&darr;&rang; \end{align}</td>
+            </tr>
+        </table>
+        <h1>コードアルゴリズム</h1>
+        <img src = "./image/フローチャートv9.png"/>
     </body>
 </html>
 
 <style>
-    pre{
-        font-family:"メイリオ";
-        border:1px solid;
-        padding:5px;
-        border-radius:10px
+    pre {
+        font-family: "メイリオ";
+        border: 1px solid;
+        padding: 5px;
+        border-radius: 10px;
     }
-    h1{
-        border-left:5px solid;
-        border-bottom:5px solid;
+    h1 {
+        border-left: 5px solid;
+        border-bottom: 5px solid;
     }
-    table{
-        border-collapse:collapse;
+    table {
+        border-collapse: collapse;
     }
-    td,th{
-        border:1px solid;
-        text-align:center;
-        width:400px;
+    td,
+    th {
+        border: 1px solid;
+        text-align: center;
+        width: 400px;
     }
-    h2{
-        border-left:3px solid
+    h2 {
+        border-left: 3px solid;
     }
 </style>
