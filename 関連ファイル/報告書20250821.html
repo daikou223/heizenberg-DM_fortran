@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>活動報告20250821</title>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <h1>実験1</h1>
+        <h2>目的</h2>
+        <p><a href = "PhysRevB.78.140405%20(1).pdf">先行研究</a>のFIG2の右下の小グラフの追実験（図１参照）。</p>
+        <figure>
+        <img src = "image/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-06-25%20115038.png">
+            <figcaption>図1.先行研究の結果</figcaption>
+        </figure>
+        <h2>原理 / 先行研究の前提</h2>
+        <p>上記のグラフ(大)は36サイトで周期境界条件を組んだカゴメ格子(図２参照)におけるz軸方向のスピン総量の大きさとハイゼンベルグ・ジャロシンスキー守谷のはハミルトニアンにおける基底エネルギーの関係について示したものである。z軸方向のスピン総量二乗と基底エネルギーは一次関数の関係にあり、それは一般のN粒子で成り立つ。この一次関数の傾きとサイト数逆数の関係が右下のグラフである。</p>
+        <h2>ハイゼンベルグ・ジャロシンスキー守屋のハミルトニアン</h2>
+        <p>今回の研究で用いているハミルトニアンは式(1)の形式をしている。第一項はハイゼンベルグ項であり、二項目がジャロシンスキー守谷項(以下,DM項)である。ハイゼンベルグ項の係数Jに関してはどの結合に関しても同じであり、DM項の係数\(\mathbb{D}_{ij}\)は結合ごとに異なる(どのように異なるかは後述)</p>
+        \begin{align}
+        \mathscr{H} = \sum_{i,j} J\mathbb{S}_i\cdot \mathbb{S}_j + \mathbb{D}_{i,j}\cdot\mathbb{S}_i\times\mathbb{S}_j\tag{1}
+        \end{align}
+        <p>このハミルトニアンは昇降演算子を用いて書き換えることが可能である。DM項の係数がZ方向のみ持つこととする。(\(\mathbb{D}_{ij}= D_{ij}\mathbb{e}_z \))</p>
+        <p>ここで昇降演算子について思い出しておく。</p>
+        \begin{align}
+            S^{\pm} = S^x\pm iS^y\tag{2}
+        \end{align}
+        <p>したがって\(S^x,S^y\)は以下のようになる</p>
+        \begin{align}
+            S^{x} = \frac{1}{2}(S^+ +  S^-)\tag{3}\\
+            S^{y} = -\frac{i}{2}(S^+ -  S^-)\tag{4}
+        \end{align}
+        <p>したがって、以上の話より</p>
+        \begin{align}
+        \mathscr{H} &= \sum_{i,j} J\mathbb{S}_i\cdot \mathbb{S}_j + \mathbb{D}_{i,j}\cdot\mathbb{S}_i\times\mathbb{S}_j\\
+        &= \sum_{i,j}J(S^x_iS^x_j + S^y_iS^y_j + S^z_iS^z_j) + D_{i,j}(S^x_iS^y_j-S^y_iS^x_j)\\
+        &= S_{i}^{+}S_{j}^{-}(\frac{J}{2}+\frac{i}{2}D_{i,j})
+        + S_{i}^{-}S_{j}^{+}(\frac{J}{2}-\frac{i}{2}D_{i,j})
+        + JS_i^zS_j^z\tag{5}
+        \end{align}
+        <p>このハミルトニアンにおいてはi,jサイト以外のサイトは関係ないので、そこのみに着目することとして、iサイトのスピン状態を\(\sigma_i\)としたときにブラケットを|\sigma_i\sigma_j\rangleとして定める。すると{\(|&uarr;&uarr; \rangle,|&uarr;&darr; \rangle,|&darr;&uarr; \rangle |&darr;&darr; \rangle\)}とするハミルトニアンの表現行列は以下の式(6)になる</p>
+        \begin{align}
+        \begin{pmatrix}
+        \frac{J}{4} & 0 & 0 & 0\\
+        0 & -\frac{J}{4} & \frac{J}{2}-\frac{i}{2}D_{i,j} & 0\\
+        0 & \frac{J}{2}+\frac{i}{2}D_{i,j}& -\frac{J}{4} & 0\\
+        0 & 0 & 0 & \frac{J}{4}\\
+        \end{pmatrix}\tag{6}
+        \end{align}
+        
+    </body>
+</html>
