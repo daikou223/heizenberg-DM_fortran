@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>強磁性とweiss分子場</title>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <h1>強磁性の現象</h1>
+        <h2>強磁性とキュリー温度</h2>
+        <p>
+            強磁性の物体では十分に低い温度では自発磁化を持つが、ある温度\(T_c\)を超える温度になると自発磁化が消失する現象がある。この温度の事をキュリー温度という。以下の表17.1にいくつかの金属におけるキュリー温度と0Kでの磁化の大きさをまとめた。
+        </p>
+        <table>
+            <caption>
+                表17.1 いくつかの金属のキュリー温度と0Kでの磁化の大きさ
+            </caption>
+            <tr>
+                <th>素材</th>
+                <th>キュリー温度 \(T_c\)/K</th>
+                <th>磁化 M(T=0)/gauss</th>
+            </tr>
+            <tr>
+                <td>Fe</td>
+                <td>1043</td>
+                <td>1752</td>
+            </tr>
+            <tr>
+                <td>Co</td>
+                <td>1394</td>
+                <td>1446</td>
+            </tr>
+            <tr>
+                <td>Ni</td>
+                <td>630</td>
+                <td>510</td>
+            </tr>
+            <tr>
+                <td>Gd(ガドリニウム)</td>
+                <td>293</td>
+                <td>1980</td>
+            </tr>
+            <tr>
+                <td>Dy(ジスプロシウム)</td>
+                <td>85</td>
+                <td>3000</td>
+            </tr>
+        </table>
+        <p id="zika">
+            このキュリー温度でのふるまいと0K環境での磁化をについて結晶をモデルとして考える。例として、原子間が\(a\)cmで各原子が\(\mu_B\)の磁気モーメントを持つ結晶を考える。(図1)0K環境下ですべての量子磁気モーメントが平行に整列したしており、その時の磁化M(0)は磁気モーメントの総和を体積で割ればいいので、(17.1a)になる
+        </p>
+        $$ M(0) = \frac{\mu_B}{a^3} = \frac{a_B^3}{a^3}\frac{\mu_B}{a_B^3}\tag{17.1a} $$
+        <figure>
+            <img src="kessyou.png" />
+            <figcaption>図1.結晶の様子</figcaption>
+        </figure>
+        <p>
+            ここにおける\(a_B,\mu_{B}\)はボーア半径と<a href = "https://www.neomag.jp/mag_navi/glossary/glossary_main.php?title_name=%E3%83%9C%E3%83%BC%E3%82%A2%E7%A3%81%E5%AD%90">ボーア磁子</a>であり、\(a_B = 5.29\times 10^{-9}\)cm、\(\mu_B =
+            0.05788\frac{\rm{meV}}{\rm{Tesla}}\)。典型的に、格子定数\(a \sim 2&Aring; = 4\sim5
+            a_B\)であるので、(17.1a)式からだいたいの推定値を出せる
+        </p>
+        $$ M(0) = 626 \mathrm{gauss} \tag{17.1b} $$
+         <p><a href = "#formula1">&gg;計算過程</a></p>
+        <p>これは表17.1と一致する</p>
+        <p>
+            磁気双極子<b>\(\mu_1\),\(\mu_2\)</b>相互関係のエネルギー\(E_{dip}\)は双極子から距離R離れた点では以下の式になる.
+        </p>
+        \begin{align} E_{dip}= \frac{1}{R^3}(\vec{\mu}_1\cdot\vec{\mu}_2-3\frac{(\vec{\mu}_1\cdot
+        \vec{R})(\vec{\mu}_2\cdot\vec{R})}{R^2})\tag{17.2} \end{align}
+        <a href = "#formula2">&gg; 計算過程</a>
+        <p>この結晶では磁気モーメントと位置ベクトルが垂直なため、第二項はなくなり、相互作用エネルギーは</p>
+        $$ E_{dip} = \frac{\mu_B^2}{a^3} \sim 10^{-5}\mathrm{eV} \sim 0.1\mathrm{K}\tag{17.3} $$
+        <p><a href = "#formula3">&gg;計算過程</a></p>
+        <p>
+            この\(0.1\)Kは電子のスピンが整列する限界温度であり、これ以上の熱を与えると熱運動により、スピン整列が破壊される事を意味する。しかし、臨界温度(キュリー温度)は1000Kほどであるため整合性が取れない。これは静電気力のよるずれであり、この議論についてはセクション17.2で行う
+        </p>
+        <!--ここまでで3m-->
+        
+        
+        <h2>ワイス分子場</h2>
+        <p>この章では結晶中での\(M(H = 0,T),\chi(H = 0,T),M(H,T = T_C)\)についてべき乗則が成り立つことを確認する.具体的な形式は以下の形である</p>
+        \begin{align}
+        M(H = 0,T) &\propto |T-T_C|^{\frac{1}{2}}\tag{1}\\
+        M(H,T = T_C) &\propto H^{\frac{1}{3}}\tag{2}\\
+        \chi(H = 0,T) &\propto |T-T_C|^{-1}\tag{3}\\
+        \end{align}
+        <h3>式(1)の証明</h3>
+        <p id = "17.4a">
+            体積Vの結晶中にN個の原子(もしくはイオン)が存在し,それぞれが角運動量\(\vec{J}\)と磁気モーメント\(\vec{\mu} =
+            -g\mu_B\vec{J}\)を持っており、そこに外部磁場\(\vec{H}\)がかかっているものとする。ここにおけるgは<a>磁気回転比要因</a>であり、ここでは\(g
+            = 2\)とする。また磁気量子数の制限より、\(|\vec{J}| = \frac{1}{2}\)を仮定する。<a class = "red">この時1粒子のハミルトニアンは以下の形式になる</a></p>
+        <div class = "red">
+            \begin{align}
+            \mathcal{H} &= -\vec{H}\cdot\vec{\mu}\\
+            (\vec{H} \equiv h\vec{e}_z)&=-h\mu_z\\
+            &= -2h\mu_BJ_z\\
+            \end{align}
+            <p>磁場の方向が量子化軸になるため\(J_z = \pm\frac{1}{2}\)である。よってボーア因子は\(e^{\mu_BH/k_BT},e^{-\mu_BH/k_BT}\)になる。</p>
+        </div>
+        <p>磁化は熱平均から以下の式で与えられる。</p>
+        
+        \begin{align} M &= \frac{N}{V}\mu_B\frac{e^{\mu_B H/k_BT}-e^{-\mu_B H/k_BT}}{e^{\mu_B H/k_BT}+e^{-\mu_B
+        H/k_BT}}\\ &= \frac{N}{V}\mu_B\tanh\frac{\mu_BH}{k_BT}\tag{17.4a} \end{align}
+        <p id = "17.4.1">
+            \(x\)が十分に小さいとき\(\tanh(x) \sim x\)より、外部磁場\(H\)が小さいならば磁化を近似することができる。
+        </p>
+        \begin{align} M &= \frac{N}{V}\mu_B\tanh\frac{\mu_B H}{k_B T}\\ &\sim \frac{N}{V}\frac{\mu_B^2H}{k_BT}\tag{17.4.1}\\
+        \end{align}
+
+        <p>これで磁化率\(\chi\)がキュリー則に従うことがわかる。</p>
+        $$ \chi = \frac{M}{H} = \frac{N}{V}\frac{\mu_B^2}{k_B T}\tag{17.4b} $$
+        <p>
+            厳密な話をすると、磁化が存在するならば、外部磁場が増幅(減衰)される。そのため、本来原子が感じる磁場の大きさを計算には有効磁場を考える必要がある。それを有効磁場\((H_{\mathrm{eff}})\)といい、適当な定数&lambda;を用いて以下になる。
+        </p>
+        \begin{align} H_\mathrm{eff} = H+\lambda M\tag{17.5} \end{align}
+        <p id = "17.6.1">有効磁場を<a href = "#17.4.1">(17.4.1)</a>に適応すると</p>
+        $$ M = \frac{N}{V}\frac{\mu_B^2}{k_BT}(H+\lambda M)\tag{17.6} $$
+        \begin{align} M &= \frac{N}{V}\frac{\mu^2_B}{k_BT_c}(\lambda M)\\ T_C &=
+        \lambda\frac{N}{V}\frac{\mu^2_B}{k_B}\tag{17.6.1} \end{align}
+        <p>
+            ここで無次元化したサイトごとの磁化(\(m\))を定義する。通常の磁化が磁気モーメントを体積で割ったもので事を思い出すと<a href="#zika"
+                >式(17.1a)</a
+            >磁化を磁気モーメントで割って、体積を掛ければ無次元量になるはずなので、定義は(17.7b)になる
+        </p>
+        $$ m = \frac{V}{N}\frac{M}{\mu_B} = \frac{M}{M_0}\tag{17.7b} $$
+        <p id = "17.8">
+            磁化MはN個のスピンすべてそろってたとして\(M = \frac{N\mu_B}{V}\)であるので、無次元磁化mの範囲は0&le;m&le;1である。m
+            =
+            1はスピンがすべて整列している場合であり、0はすべてがランダムな方向を向いている状態である。<a href = "#17.4a">(17.4a)</a>,<a href = "#17.6.1">(17.6.1)</a>,上式より磁化mは(17.8)式の性質も持つ
+        </p>
+        $$ m = \tanh(\frac{\mu_BH}{k_BT}+\frac{T_c}{T}m)\tag{17.8} $$
+        <p>これは方程式であるので、mについての解を得ることができる。</p>
+        <p>臨界温度付近でのふるまいについて考える.上式の変数をまとめる。</p>
+        $$ m = \tanh(h+\tau m) $$ $$ (h = \frac{\mu_BH}{k_BT},\tau = \frac{T_C}{T}) $$
+        <p>加法定理を用いて崩すと</p>
+        \begin{align} m &= \frac{\tanh h + \tanh(\tau m)}{1+\tanh h\cdot\tanh(\tau m)}\\ \tanh h &= \frac{m-\tanh(\tau
+        m)}{1-\tanh(\tau m)} \end{align}
+        <p>小さい\(x\)に対して、\(\tanh(x) = x-\frac{x^3}{3}+\cdots\)で、外部磁場がないときはmは小さいことが容易に想像できるので、上式は</p>
+        $$ \tanh h = \frac{m-\tau m+\frac{\tau^3 m^3}{3}+\cdots}{1-\tau m^2+\cdots} \sim \frac{m-\tau m+\frac{\tau^3 m^3}{3}+\cdots}{1-\tau m^2}$$
+        <p>小さい\(x\)に対して\(\frac{1}{1-x} = 1+x+x^2+x^3+\cdots\)が成り立つことを考えると、上式が変形可能で</p>
+        \begin{align} \tanh h &= (m-\tau m+\frac{\tau^3 m^3}{3}+\cdots)(1+\tau m^2+\cdots)\\ &\sim (m-\tau
+        m+\frac{\tau^3 m^3}{3})(1+\tau m^2)\\ &= (1-\tau)m+(\tau-\tau^2 + \frac{1}{3}\tau^3)m^3 + \frac{\tau^5}{3}m^5\\
+        (m \ll 1,\tau \sim 1) &= (1-\tau)m+\frac{1}{3}m^3 \end{align}
+        <p>外部磁場\(H\)が小さくなる時、無次元磁場\(h\)も小さくなるので、\(\tanh h \sim h\)になる</p>
+        $$ h = (1-\tau)m + \frac{1}{3}m^3\tag{17.12} $$
+        <p>
+            外部磁場を完全に\(H = 0\)とすると\(h =
+            0\)になるので、式(17.12)の方程式は解くことができ、(17.13)を導出できる。
+        </p>
+        $$ m^2 = 3\frac{T_C-T}{T}\tag{17.13} $$
+        <p>よって無次元自発磁化\(m &prop; (T_C-T)^{\beta},\beta = \frac{1}{2}\)がわかる。 この&beta;を境界指数という</p>
+        <h3>(2)の証明</h3>
+        <p>ここでは\(M(H,T=T_C)\)の計算を行う</p>
+        <p><a>式(17.12)式</a>から\(h,\tau\)をもとに戻すと</p>
+        \begin{align}
+         \frac{\mu_B H}{k_B T} &= (1-\frac{T_C}{T})m+\frac{1}{3}m^3\\
+        (\frac{T_C}{T}\sim 1) &= \frac{1}{3}m^3\tag{17.14}
+        \end{align}
+        <p>したがって磁化Mは外部磁場の3乗根に比例する</p>
+        $$
+            M \propto H^{\frac{1}{3}}
+        $$
+        <h3>(3)の証明</h3>
+        <!--<p>
+            次に自発磁化を考える。自発磁化は外部磁場が存在しない状態なので\(H = 0\)を(17.8)に代入すると(17.8.1)式になる。
+        </p>
+        $$ m = \tanh{\frac{T_c}{T}m}\tag{17.8.1} $$
+        <p>この方程式は解析的に解くことができないので、グラフを書いて考えることとする</p>
+        <figure>
+            <img src="gragh.png" />
+            <figcaption>図2.\(\tanh\)のグラフ</figcaption>
+        </figure>
+        <p>
+            \(T\)&ge;\(T_C\)のときは非自明な交点を持たない。それ以外では交点を持つので、交点を推定したい。(17.8)式においてH&rarr;0においてmも小さくなるので、\(\tanh(x)\sim
+            x\)を行うと
+        </p>
+        $$ m = \frac{\mu_BH}{k_BT}+\frac{T_C}{T}m \tag{17.9} $$
+        <p>この方程式は解くことができるので、解くと</p>
+        $$ \frac{m}{H} = \frac{\mu_B}{k_B(T-T_C)}\equiv \chi\tag{17.10a} $$
+        <p>
+            ワイス分子場理論では磁化率\(\chi\)は\((T-T_C)^{-1}\)に従う。
+        </p>-->
+        
+        
+        
+        <p>
+            次に磁化率\(\chi(H = 0,T)\)をついて考える。(17.12)式をmがHの関数であると考えながら両辺Hで微分操作を行うと
+        </p>
+        $$ (1-\frac{T_C}{T})\frac{\partial m}{\partial H} + m^2\frac{\partial m}{\partial H} = \frac{\mu_B}{k_B
+        T}\tag{17.14.1} $$
+        <p>キュリー温度より高いところでは磁化\(m = 0\)であるので、上式を変形すると</p>
+        \begin{align} \frac{\partial m}{\partial H} &= \frac{\mu_B}{k_B(T-T_C)}\\ \frac{\partial m}{\partial H} &\propto
+        (T-T_C)^{-\gamma},\gamma = 1 \tag{17.14.2} \end{align}
+        <p>キュリー温度より低い点では(17.13)より\(m^2\)の形がわかっているので(17.14.1)に代入し</p>
+        \begin{align} (1-\frac{T_C}{T})\frac{\partial m}{\partial H}+3\frac{T_C-T}{T}\frac{\partial m}{\partial H} &=
+        \frac{\mu_B}{k_BT}\\
+        \frac{\partial m}{\partial H} = \frac{1}{2}\frac{\mu_B}{k_B(T_C-T)}\\
+        \frac{\partial
+        m}{\partial H} \propto (T-T_C)^{-\gamma},\gamma = 1\tag{17.14.3} \end{align}
+        <p>式(17.14.2)と式(17.14.3)よりキュリー温度の前後どちらでも-1乗に比例する。</p>
+        $$ \chi \sim |T-T_C|^{-\gamma},\gamma = 1\tag{17.15} $$
+        
+        
+         <h3>まとめ</h3>
+        <p>
+            臨界温度近傍では、ゼロ磁場磁化M、キュリー温度の磁化M、ゼロ磁場の磁化率\(\chi\)、ゼロ磁場の比熱Cなどの大事な量がべき乗則に従う。それぞれの法則は表17.2にまとめる通りである。(dは格子次元数)
+        </p>
+        <table>
+            <caption>表17.2 べき乗則の一覧</caption>
+            <tr>
+                <th></th>
+                <th>近似式</th>
+                <th>(d = 4)<br />平均場近似</th>
+                <th>(d = 2)<br />イジングモデル</th>
+                <th>(d = 3)<br />イジングモデル</th>
+                <th>(d = 3)<br />ハイゼンベルグモデル</th>
+            </tr>
+            <tr>
+                <td>ゼロ磁場比熱</td>
+                <td>\(C\sim |T-T_C|^{-\alpha}\)</td>
+                <td>\(\alpha = 0\)</td>
+                <td>\(\alpha = 0\)</td>
+                <td>\(\alpha = 0.11\)</td>
+                <td>\(\alpha = -0.12\)</td>
+            </tr>
+            <tr>
+                <td>ゼロ磁場磁化</td>
+                <td>\(M\sim |T-T_C|^{\beta}\)</td>
+                <td>\(\beta = \frac{1}{2}\)</td>
+                <td>\(\beta = \frac{1}{8}\)</td>
+                <td>\(\beta = 0.32\)</td>
+                <td>\(\beta = 0.37\)</td>
+            </tr>
+            <tr>
+                <td>ゼロ磁場磁化率</td>
+                <td>\(\chi = |T-T_C|^{-\gamma}\)</td>
+                <td>\(\gamma = 1\)</td>
+                <td>\(\gamma = \frac{7}{4}\)</td>
+                <td>\(\gamma = 1.24\)</td>
+                <td>\(\gamma = 1.39\)</td>
+            </tr>
+            <tr>
+                <td>キュリー温度磁化</td>
+                <td>\(M \sim H^{1/\delta}\)</td>
+                <td>\(\delta = 3\)</td>
+                <td>\(\delta = 15\)</td>
+                <td>\(\delta = 4.82\)</td>
+                <td>\(\delta = 4.80\)</td>
+            </tr>
+            <tr>
+                <td><a href = "https://storytellphys.wordpress.com/2022/07/05/%E7%9B%B8%E9%96%A2/">相関長</a></td>
+                <td>\(\xi \sim |T-T_c|^{-\nu}\)</td>
+                <td>\(\nu = \frac{1}{2}\)</td>
+                <td>\(\nu = 1\)</td>
+                <td>\(\nu = 0.63\)</td>
+                <td>\(\nu = 0.71\)</td>
+            </tr>
+            <tr>
+                <td><a href = "https://pfwww.kek.jp/pf-seminar/powder4_abst/kodama.pdf">キュリー温度対相関関数</a></td>
+                <td>\(\Gamma \sim \frac{1}{r^{d-2+\eta}}\)</td>
+                <td>\(\eta = 0\)</td>
+                <td>\(\eta = \frac{1}{4}\)</td>
+                <td>\(\eta = 0.03\)</td>
+                <td>\(\eta = 0.03\)</td>
+            </tr>
+        </table>
+        <p>それぞれの指数に関しては関係式があるので独立ではないことに注意が必要である。</p>
+        \begin{align}
+        \alpha +2\beta+\gamma = 2\\
+        \gamma = \nu(2-\eta)\\
+        \gamma = \beta(\delta-1)\\
+        \nu d = 2-\alpha
+        \end{align}
+        <p>特に\(\alpha\)と\(\delta\)が求められればほかの指数を得ることができる。</p>
+        
+        <h2>ワイス分子場の欠陥</h2>
+        <h3>欠陥(1)</h3>
+        <p>ワイス分子場は平均場近似であるが故に、いくつかの欠陥がある。<a href = "#17.6.1">(17.6.1)式</a>で用いられてる\(\lambda\)をワイスパラメータという。</p>
+        \begin{align}
+        \lambda &= \frac{V}{N}\frac{k_B T_C}{\mu_B^2}\\
+        \end{align}
+        <p>\(\frac{V}{N}\)は1サイトあたりの体積になるので\(a^3\)に近似とると</p>
+        \begin{align}
+        \lambda&= \frac{a^3}{a_B^3}\frac{a_B^3}{\mu_B^2}k_BT_C \sim 10^{4}-10^5
+        \end{align}
+        <p>しかし9.7.3章のローレンツ空洞場二従うと\(\lambda = \frac{4\pi}{3}\)になるはずである。この差を埋めるためには17.2章で論じる量子力学的アプローチが必要になる。</p>
+        <h3>欠陥(2)</h3>
+        <p>低温領域では<a href = "#17.8">(17.8)式</a>より、無次元磁化\(m\)は以下のように変形可能である。
+        </p>
+        <div class = "red">
+        \begin{align}
+        m &= \tanh(\frac{\mu_B H}{k_B T}+\frac{T_c}{T}m)\\
+        (H = 0) &= \tanh(\frac{T_c}{T}m)\\
+        &= \frac{e^{\frac{T_C}{T}}m-e^{-\frac{T_C}{T}}m}{e^{\frac{T_C}{T}}m+e^{-\frac{T_C}{T}}m}\\
+        (e^{-\frac{T_C}{T}} \sim 0)&=\frac{e^{\frac{T_C}{T}}m-e^{-\frac{T_C}{T}}m}{e^{\frac{T_C}{T}}m}\\
+        &= 1-e^{-2\frac{T_C}{T}m}\\
+        (\frac{T_C}{T} \gg m)&= 1-e^{-2\frac{T_C}{T}}\\
+        \end{align}
+        </div>
+        <p>上式によって、温度によって磁化が指数関数的に変化すると予想されているが、実験的には\(T^{3/2}\)の依存性がみられる。これの矛盾点ついては17.4章で論じる。</p>
+        <h3>欠陥(3)</h3>
+        <p>臨界温度領域にて、平均場近似を使うと\(\beta = \frac{1}{2},\gamma = 1\)となったが、表17.3に示すように、材料間で違いがみられる。これは17.5章,17.6章にて議論する</p>
+        <table>
+            <caption>表17.3 いくつかの強磁性体の臨界指数</caption>
+            <tr><th>材料</th><th>&beta;</th><th>&gamma;</th></tr>
+            <tr><td>鉄</td><td>0.39</td><td>1.33</td></tr>
+            <tr><td>コバルト</td><td>0.44</td><td>1.23</td></tr>
+            <tr><td>ニッケル</td><td>0.38</td><td>1.34</td></tr>
+            <tr><td>ガドリニウム</td><td>0.38</td><td>1.20</td></tr>
+        </table>
+        <!-- ********************************** -->
+
+        <h1 id="formula1">計算過程1</h1>
+        <p>このテキストではCGS単位系であることに注意が必要である</p>
+        <div class="dashedBorder">
+            <p>必要な定数</p>
+            <p>
+                \(a_B = 5.29\times 10^{-9}\)cm , \(\mu_B = 0.05788\frac{\rm{meV}}{\rm{Tesla}}\) 
+            </p>
+        </div>
+        <p>教科書の方では \(\mu_B = 0.05788\frac{\rm{meV}}{\rm{Tesla}}\) が使われいるが、CGSではerg/Gが標準なのでそちらに合わせる\(\mu_B \sim 9.274\times10^{-21} \)erg/G</p>
+        \begin{align} 
+        \frac{\mu_B}{a_B^3} &= \frac{9.274\times10^{-21}}{(5.29\times 10^{-9})^3}\\
+        &= 6.2646\times 10^{4}\mathrm{erg}\\
+        &= 6.2646\times 10^{4}\mathrm{gauss}
+        \end{align}
+        <p>
+            結晶の原子間はボーア半径の4-5倍であるため、\(\frac{a_B^3}{a^3}\)は1/100程度になるため、\(M(0) = 626\)gaussになる
+        </p>
+        <h1 id="formula2">計算過程2</h1>
+        <p>
+            そもそも磁気モーメントの定義とは\(\vec{\mu} =
+            I\vec{a}\)で定義され、\(\vec{a}\)は面積ベクトルである。面積ベクトルは線積分に書き換えることができ、形式は以下のようになる。
+        </p>
+        \begin{align} \vec{a} = \frac{1}{2}\oint \vec{r}^{\prime}\times d\vec{l}^{\prime} \end{align}
+        <p>したがって磁気モーメント\(\vec{\mu}\)は</p>
+        \begin{align} \vec{\mu} = \frac{I}{2}\oint \vec{r}^{\prime}\times d\vec{l}^{\prime} \end{align}
+        <p>これを念頭に置きながらエネルギーを求める。二つの磁気モーメントが存在するときエネルギーは以下の式になる</p>
+        
+        \begin{align} E_{dip} = -\vec{\mu_2}\cdot\vec{B} \end{align}
+        
+        <p>位置\(\vec{r}\)での磁場は<strong>CGS</strong>のビオサバールより導出可能である。</p>
+        
+        \begin{align}
+        \vec{B} &= \frac{I}{c}\oint \frac{(\vec{r}-\vec{r}^{\prime})\times
+        d\vec{l}}{|\vec{r}-\vec{r}^{\prime}|^{3}}\\
+        \end{align}
+        <p>
+            ところでベクトルポテンシャル\(\vec{A}\)は\(\vec{B} =
+            \nabla\times\vec{A}\)にて定義される。両辺に外積をとると左辺は\(\nabla\times\vec{B} =
+            \vec{I}\)になる(静磁場中).よって式は下のように変形される
+        </p>
+        \begin{align} \vec{I} &= \nabla\times\nabla\times\vec{A}\\ 
+        &=\nabla(\nabla\cdot\vec{A})+(\nabla\cdot\nabla)\vec{A}\\ 
+        (ゲージポテンシャルを利用)&= \nabla^2\vec{A} \end{align}
+        <p>上式はポアソン方程式なのでグリーン関数法を用いて以下の式になる</p>
+        \begin{align} \vec{A} = I\int\frac{1}{|\vec{r}-\vec{r}^{\prime}|}d\vec{l}
+        \end{align}
+        
+        <p>\(\vec{r}&gg; \vec{r}^\prime\)のとき、多重極展開すると</p>
+        
+        \begin{align}
+        \vec{A} &= I\int\frac{1}{|\vec{r}-\vec{r}^{\prime}|}d\vec{l}\\
+        &=I\int\frac{1}{r}(|1-\frac{\vec{r}^{\prime}}{\vec{r}}|^2)^{-\frac{1}{2}} d\vec{l}\\ 
+        &= I\int\frac{1}{r}((1-\frac{\vec{r}^{\prime}}{\vec{r}})\cdot(1-\frac{\vec{r}^{\prime}}{\vec{r}}))^{-\frac{1}{2}}d\vec{l}\\ 
+        &\sim I\int\frac{1}{r}(1-\frac{2\vec{r}^\prime}{\vec{r}})^{-\frac{1}{2}}d\vec{l}\\
+        &\sim I\int\frac{1}{r}(1+\frac{\vec{r}^\prime}{\vec{r}})d\vec{l}\\
+        &= I\int\frac{1}{r} + \frac{\vec{r}\cdot\vec{r}^{\prime}}{r^3}d\vec{l}\\
+        &= I\int\frac{\vec{r}\cdot \vec{r}^{\prime}}{r^3}d\vec{l}\\
+        \end{align}
+        <p>ここで\(\vec{r}\times \vec{r}^{\prime} \times d\vec{l}\)のベクトル三重積を考える。</p>
+        \begin{align}
+        \vec{r}\times \vec{r}^{\prime} \times d\vec{l} &= \vec{r}(\vec{r}^{\prime}\cdot d\vec{l}) - (\vec{r}\cdot\vec{r}^{\prime})d\vec{l}\\
+        (\vec{r}\cdot\vec{r}^{\prime})d\vec{l} &= \vec{r}^{\prime}(\vec{r}\cdot d\vec{l})- \vec{r}\times \vec{r}^{\prime} \times d\vec{l}\\
+        \end{align}
+        <p>よって、\(\vec{A}\)はさらに計算を進めることができ</p>
+        \begin{align}
+        \vec{A} &= I(\frac{\vec{r}}{r^3}\int\vec{r}^{\prime}\cdot d\vec{l}-\int\frac{\vec{r}}{r^3}\times\vec{r}^{\prime}\times d\vec{l})\\
+        &=  I(-\int\frac{\vec{r}}{r^3}\times\vec{r}^{\prime}\times d\vec{l})\\
+        &=  -(\frac{\vec{r}}{r^3}\times \vec{\mu})\\
+        \end{align}
+        <p>ベクトルポテンシャルが求まったので、ここから磁場を求めると</p>
+        \begin{align}
+        \vec{B} &= \nabla\times\vec{A}\\
+        &= -\nabla\times\frac{\vec{r}}{r^3}\times\vec{\mu}\\
+        &= (-\nabla(\frac{\vec{r}}{r^3}\cdot\vec{\mu})+(\nabla\cdot\frac{\vec{r}}{r^3})\vec{\mu})\\
+        &= (-\nabla(\frac{\vec{r}}{r^3}\cdot\vec{\mu})+(\nabla\cdot\frac{\vec{r}}{r^3})\vec{\mu})\\
+        &= (-\frac{\vec{\mu}}{r^3}+3\frac{\vec{r}\cdot\vec{\mu}}{r^5}\vec{r})
+        \end{align}
+        <p>よって相互作用のエネルギーは\(E_{\mathrm{dip}} = -\vec{\mu}\cdot\vec{B}\)</p>
+        $$
+        E_{\mathrm{dip}} = \frac{1}{r^3}[\vec{\mu}_1\cdot\vec{\mu}_2-3\frac{(\vec{\mu}_1\cdot\vec{r})(\vec{\mu}_2\cdot\vec{r})}{r^2}]
+        $$
+        <h2 id = "formula3">計算過程3</h2>
+        <p>今回はeVで出せばいいのでMKS単位系で出す。</p>
+        <div class="dashedBorder">
+            <p>必要な定数</p>
+            <p>
+                \(a_B = 5.29\times 10^{-9}\)cm , \(\mu_B = 9.274\times 10^{-21}\)erg/G,1erg =  \(6.242\times 10^{11}\) eV
+            </p>
+        </div>
+        <p>\(a \sim 4-5 a_B\)であることを考えると</p>
+            \begin{align}
+                \frac{mu_B^2}{a^3} &= \frac{\mu_B^2}{a_B^3}\frac{a_B^3}{a^3}\\
+            &= \frac{(9.274\times 10^{-21})^2}{(5.297\times 10^{-9})^3}\times6.242\times 10^{11} \times\frac{1}{100}\\
+        &= 3.61\times 10^{-6} \sim 10^{-5}
+            \end{align}
+        <p>eVを温度Kに直すための変換式は以下の形になる.eは電気素量・\(k_B\)はボルツマン定数とする</p>
+        \begin{align}
+         1\mathrm{eV} &= \frac{e}{k_B} \mathrm{K}\\
+        &= \frac{1.602\times 10^{-19}}{1.381\times 10^{-23}} = 1.16\times 10^{5}
+        \end{align}
+        <p>したがって\(3.61\times 10^{-6}\)eVは\(0.0419\)Kに値する</p>
+    </body>
+</html>
+
+<style>
+    table {
+        border-top: 3px double black;
+        border-bottom: 3px double black;
+        border-collapse: collapse;
+        width: 80%;
+        margin-left: 10%;
+    }
+    th {
+        border-bottom: 1px solid black;
+    }
+    td {
+        text-align: center;
+    }
+    .dashedBorder {
+        border: dashed 1px black;
+        padding-left: 10px;
+    }
+    h1{
+        text-align:center;
+    }
+    h2{
+        border-left:5px solid black;
+        border-bottom:3px solid black;
+    }
+    h3{
+       border-bottom:2px solid black; 
+    }
+    figure{
+        margin-left:20%;
+    }
+    figcaption{
+        margin-left:30%;
+    }
+    .red{
+        color:red;
+    }
+</style>

@@ -1,0 +1,3212 @@
+ UP_NUM =            1
+ HamilSize           27
+ create states
+ chashed IdToInd
+ start raily method
+ attenution   0.158579543    
+ 
+         178
+   10.3270187    
+ UP_NUM =            2
+ HamilSize          351
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    9.57903713E-02
+ 
+         253
+   7.22382164    
+ UP_NUM =            3
+ HamilSize         2925
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    7.28361756E-02
+ 
+         392
+   4.20223045    
+ UP_NUM =            4
+ HamilSize        17550
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    5.91267906E-02
+ 
+         564
+   1.29366994    
+ UP_NUM =            5
+ HamilSize        80730
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    5.07536270E-02
+ 
+ 
+ Current UP_NUM =            5
+ number          95
+ conver is    327.336792      times
+ Enegy is  -1.23623753    
+ norm   0.178195760    
+         398
+  -1.41047966    
+ UP_NUM =            6
+ HamilSize       296010
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    4.50265482E-02
+ 
+ 
+ Current UP_NUM =            6
+ number          28
+ conver is    6203.84229      times
+ Enegy is  -2.68163013    
+ norm   0.807706177    
+ 
+ Current UP_NUM =            6
+ number          36
+ conver is    3603.07690      times
+ Enegy is  -3.04862309    
+ norm   0.618521154    
+ 
+ Current UP_NUM =            6
+ number          46
+ conver is    2033.13831      times
+ Enegy is  -3.31363654    
+ norm   0.466324836    
+ attenution    2.77286209E-02
+ 
+ 
+ Current UP_NUM =            6
+ number          60
+ conver is    811.696045      times
+ Enegy is  -3.45175242    
+ norm   0.377017051    
+ 
+ Current UP_NUM =            6
+ number          61
+ conver is    785.708435      times
+ Enegy is  -3.45960951    
+ norm   0.371652544    
+ 
+ Current UP_NUM =            6
+ number          64
+ conver is    721.693054      times
+ Enegy is  -3.48177576    
+ norm   0.356245548    
+ 
+ Current UP_NUM =            6
+ number         137
+ conver is    180.268295      times
+ Enegy is  -3.73348999    
+ norm   0.177207321    
+ 
+ Current UP_NUM =            6
+ number         190
+ conver is    109.958649      times
+ Enegy is  -3.80664539    
+ norm   0.141877264    
+ 
+ Current UP_NUM =            6
+ number         201
+ conver is    108.051300      times
+ Enegy is  -3.81853127    
+ norm   0.136806399    
+ attenution    2.66526900E-02
+ 
+ 
+ Current UP_NUM =            6
+ number         209
+ conver is    95.2243805      times
+ Enegy is  -3.82632732    
+ norm   0.133423403    
+ 
+ Current UP_NUM =            6
+ number         272
+ conver is    63.1332397      times
+ Enegy is  -3.87561727    
+ norm   0.108388491    
+ attenution    2.65834015E-02
+ 
+ 
+ Current UP_NUM =            6
+ number         337
+ conver is    37.4078751      times
+ Enegy is  -3.90774107    
+ norm    8.42362195E-02
+ 
+ Current UP_NUM =            6
+ number         370
+ conver is    27.9903412      times
+ Enegy is  -3.91864061    
+ norm    7.32488036E-02
+ 
+ Current UP_NUM =            6
+ number         450
+ conver is    13.1368637      times
+ Enegy is  -3.93509007    
+ norm    5.15426323E-02
+ 
+ Current UP_NUM =            6
+ number         497
+ conver is    7.12871552      times
+ Enegy is  -3.94053173    
+ norm    4.19702418E-02
+ 
+ Current UP_NUM =            6
+ number         560
+ conver is    4.26769257      times
+ Enegy is  -3.94516850    
+ norm    3.21682468E-02
+         582
+  -3.94622231    
+ UP_NUM =            7
+ HamilSize       888030
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    4.09544297E-02
+ 
+ 
+ Current UP_NUM =            7
+ number           7
+ conver is    44057.4766      times
+ Enegy is -0.347803771    
+ norm    2.26327372    
+ 
+ Current UP_NUM =            7
+ number          21
+ conver is    14080.0000      times
+ Enegy is  -3.94134545    
+ norm    1.27077031    
+ 
+ Current UP_NUM =            7
+ number          39
+ conver is    3543.47241      times
+ Enegy is  -5.22290325    
+ norm   0.643704891    
+ 
+ Current UP_NUM =            7
+ number          43
+ conver is    2785.73047      times
+ Enegy is  -5.34525585    
+ norm   0.569989026    
+ 
+ Current UP_NUM =            7
+ number          45
+ conver is    2476.40625      times
+ Enegy is  -5.39628792    
+ norm   0.538337171    
+ 
+ Current UP_NUM =            7
+ number          67
+ conver is    890.874878      times
+ Enegy is  -5.71743059    
+ norm   0.324198484    
+ 
+ Current UP_NUM =            7
+ number          83
+ conver is    518.369690      times
+ Enegy is  -5.82436085    
+ norm   0.250518948    
+ attenution    2.41977964E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         102
+ conver is    238.609314      times
+ Enegy is  -5.87502718    
+ norm   0.219645038    
+ 
+ Current UP_NUM =            7
+ number         111
+ conver is    219.583511      times
+ Enegy is  -5.89494371    
+ norm   0.208874226    
+ 
+ Current UP_NUM =            7
+ number         123
+ conver is    186.824799      times
+ Enegy is  -5.91897774    
+ norm   0.197316974    
+ 
+ Current UP_NUM =            7
+ number         127
+ conver is    182.914734      times
+ Enegy is  -5.92654514    
+ norm   0.194042534    
+ 
+ Current UP_NUM =            7
+ number         158
+ conver is    157.737732      times
+ Enegy is  -5.97728443    
+ norm   0.174913019    
+ attenution    2.39010248E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         164
+ conver is    142.335892      times
+ Enegy is  -5.98592377    
+ norm   0.172058225    
+ attenution    2.38878597E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         166
+ conver is    141.096115      times
+ Enegy is  -5.98867226    
+ norm   0.171139866    
+ attenution    2.38833018E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         167
+ conver is    141.429901      times
+ Enegy is  -5.99008656    
+ norm   0.170686796    
+ 
+ Current UP_NUM =            7
+ number         169
+ conver is    142.478943      times
+ Enegy is  -5.99287939    
+ norm   0.169790074    
+ attenution    2.38775704E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         170
+ conver is    126.314163      times
+ Enegy is  -5.99414253    
+ norm   0.169344887    
+ 
+ Current UP_NUM =            7
+ number         201
+ conver is    110.006332      times
+ Enegy is  -6.03354931    
+ norm   0.156512171    
+ 
+ Current UP_NUM =            7
+ number         206
+ conver is    126.791000      times
+ Enegy is  -6.03933811    
+ norm   0.154512197    
+ 
+ Current UP_NUM =            7
+ number         212
+ conver is    115.060806      times
+ Enegy is  -6.04612160    
+ norm   0.152118266    
+ 
+ Current UP_NUM =            7
+ number         217
+ conver is    104.188919      times
+ Enegy is  -6.05162811    
+ norm   0.150119811    
+ 
+ Current UP_NUM =            7
+ number         224
+ conver is    110.006332      times
+ Enegy is  -6.05897903    
+ norm   0.147314087    
+ 
+ Current UP_NUM =            7
+ number         236
+ conver is    88.7393951      times
+ Enegy is  -6.07101297    
+ norm   0.142483845    
+ 
+ Current UP_NUM =            7
+ number         243
+ conver is    91.1235809      times
+ Enegy is  -6.07769632    
+ norm   0.139651865    
+ 
+ Current UP_NUM =            7
+ number         247
+ conver is    105.190277      times
+ Enegy is  -6.08147573    
+ norm   0.138032898    
+ 
+ Current UP_NUM =            7
+ number         248
+ conver is    80.2516937      times
+ Enegy is  -6.08227825    
+ norm   0.137627468    
+ 
+ Current UP_NUM =            7
+ number         257
+ conver is    91.7434692      times
+ Enegy is  -6.09039021    
+ norm   0.133987844    
+ 
+ Current UP_NUM =            7
+ number         265
+ conver is    90.6467438      times
+ Enegy is  -6.09716940    
+ norm   0.130757555    
+ 
+ Current UP_NUM =            7
+ number         268
+ conver is    79.7271729      times
+ Enegy is  -6.09950924    
+ norm   0.129551321    
+ 
+ Current UP_NUM =            7
+ number         288
+ conver is    65.7558441      times
+ Enegy is  -6.11449146    
+ norm   0.121604025    
+ attenution    2.37551015E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         291
+ conver is    73.8143921      times
+ Enegy is  -6.11663294    
+ norm   0.120436810    
+ 
+ Current UP_NUM =            7
+ number         293
+ conver is    62.2749329      times
+ Enegy is  -6.11792421    
+ norm   0.119663745    
+ 
+ Current UP_NUM =            7
+ number         301
+ conver is    59.6523285      times
+ Enegy is  -6.12318659    
+ norm   0.116597153    
+ 
+ Current UP_NUM =            7
+ number         304
+ conver is    71.1441040      times
+ Enegy is  -6.12518311    
+ norm   0.115461864    
+ 
+ Current UP_NUM =            7
+ number         305
+ conver is    59.7953796      times
+ Enegy is  -6.12578106    
+ norm   0.115085177    
+ 
+ Current UP_NUM =            7
+ number         310
+ conver is    61.8457794      times
+ Enegy is  -6.12887049    
+ norm   0.113216884    
+ 
+ Current UP_NUM =            7
+ number         312
+ conver is    62.4656677      times
+ Enegy is  -6.13012695    
+ norm   0.112476446    
+ 
+ Current UP_NUM =            7
+ number         321
+ conver is    61.2258911      times
+ Enegy is  -6.13551617    
+ norm   0.109200411    
+ 
+ Current UP_NUM =            7
+ number         329
+ conver is    50.4016876      times
+ Enegy is  -6.13985395    
+ norm   0.106365845    
+ 
+ Current UP_NUM =            7
+ number         338
+ conver is    52.5951385      times
+ Enegy is  -6.14461803    
+ norm   0.103266589    
+ 
+ Current UP_NUM =            7
+ number         339
+ conver is    45.2041626      times
+ Enegy is  -6.14507008    
+ norm   0.102929160    
+ 
+ Current UP_NUM =            7
+ number         347
+ conver is    47.1115112      times
+ Enegy is  -6.14898109    
+ norm   0.100270621    
+ 
+ Current UP_NUM =            7
+ number         359
+ conver is    51.6891479      times
+ Enegy is  -6.15456676    
+ norm    9.64405909E-02
+ 
+ Current UP_NUM =            7
+ number         387
+ conver is    27.4658203      times
+ Enegy is  -6.16586065    
+ norm    8.82456675E-02
+ 
+ Current UP_NUM =            7
+ number         434
+ conver is    37.3840332      times
+ Enegy is  -6.18105030    
+ norm    7.66782165E-02
+ 
+ Current UP_NUM =            7
+ number         439
+ conver is    23.2219696      times
+ Enegy is  -6.18234968    
+ norm    7.55970329E-02
+ attenution    2.36682165E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         463
+ conver is    26.8459320      times
+ Enegy is  -6.18835497    
+ norm    7.07775503E-02
+ 
+ Current UP_NUM =            7
+ number         480
+ conver is    25.4631042      times
+ Enegy is  -6.19233084    
+ norm    6.76875412E-02
+ 
+ Current UP_NUM =            7
+ number         487
+ conver is    14.4481659      times
+ Enegy is  -6.19372272    
+ norm    6.64849654E-02
+ 
+ Current UP_NUM =            7
+ number         513
+ conver is    16.3555145      times
+ Enegy is  -6.19889069    
+ norm    6.23447821E-02
+ 
+ Current UP_NUM =            7
+ number         514
+ conver is    21.9345093      times
+ Enegy is  -6.19911003    
+ norm    6.21938780E-02
+ 
+ Current UP_NUM =            7
+ number         515
+ conver is    17.6429749      times
+ Enegy is  -6.19928646    
+ norm    6.20445274E-02
+ 
+ Current UP_NUM =            7
+ number         518
+ conver is    17.9290771      times
+ Enegy is  -6.19980335    
+ norm    6.15998395E-02
+ 
+ Current UP_NUM =            7
+ number         528
+ conver is    14.1143799      times
+ Enegy is  -6.20142460    
+ norm    6.01595417E-02
+ 
+ Current UP_NUM =            7
+ number         534
+ conver is    14.1620636      times
+ Enegy is  -6.20239210    
+ norm    5.93237802E-02
+ 
+ Current UP_NUM =            7
+ number         542
+ conver is    16.5462494      times
+ Enegy is  -6.20382261    
+ norm    5.82393110E-02
+ 
+ Current UP_NUM =            7
+ number         544
+ conver is    23.9372253      times
+ Enegy is  -6.20417118    
+ norm    5.79738282E-02
+ 
+ Current UP_NUM =            7
+ number         547
+ conver is    16.0217285      times
+ Enegy is  -6.20459366    
+ norm    5.75806685E-02
+ 
+ Current UP_NUM =            7
+ number         549
+ conver is    10.3473663      times
+ Enegy is  -6.20487499    
+ norm    5.73216826E-02
+ 
+ Current UP_NUM =            7
+ number         550
+ conver is    18.1674957      times
+ Enegy is  -6.20505667    
+ norm    5.71916550E-02
+ 
+ Current UP_NUM =            7
+ number         551
+ conver is    11.3487244      times
+ Enegy is  -6.20517015    
+ norm    5.70636392E-02
+ 
+ Current UP_NUM =            7
+ number         553
+ conver is    17.3091888      times
+ Enegy is  -6.20545101    
+ norm    5.68079911E-02
+ 
+ Current UP_NUM =            7
+ number         570
+ conver is    10.9195709      times
+ Enegy is  -6.20796347    
+ norm    5.47114275E-02
+ attenution    2.36243494E-02
+ 
+ 
+ Current UP_NUM =            7
+ number         580
+ conver is    11.4917755      times
+ Enegy is  -6.20935965    
+ norm    5.35413623E-02
+ 
+ Current UP_NUM =            7
+ number         584
+ conver is    15.4018402      times
+ Enegy is  -6.20992708    
+ norm    5.30853607E-02
+ 
+ Current UP_NUM =            7
+ number         587
+ conver is    11.4917755      times
+ Enegy is  -6.21033144    
+ norm    5.27480729E-02
+ 
+ Current UP_NUM =            7
+ number         589
+ conver is    14.6865845      times
+ Enegy is  -6.21054459    
+ norm    5.25254756E-02
+ 
+ Current UP_NUM =            7
+ number         591
+ conver is    12.5885010      times
+ Enegy is  -6.21076965    
+ norm    5.23048267E-02
+ 
+ Current UP_NUM =            7
+ number         627
+ conver is    13.7329102      times
+ Enegy is  -6.21505308    
+ norm    4.85731624E-02
+ 
+ Current UP_NUM =            7
+ number         648
+ conver is    7.77244568      times
+ Enegy is  -6.21725416    
+ norm    4.65909690E-02
+ 
+ Current UP_NUM =            7
+ number         655
+ conver is    7.34329224      times
+ Enegy is  -6.21803093    
+ norm    4.59572636E-02
+ 
+ Current UP_NUM =            7
+ number         701
+ conver is    8.72612000      times
+ Enegy is  -6.22213697    
+ norm    4.20944542E-02
+ 
+ Current UP_NUM =            7
+ number         715
+ conver is    12.0639801      times
+ Enegy is  -6.22333241    
+ norm    4.10078503E-02
+         724
+  -6.22388506    
+ UP_NUM =            8
+ HamilSize      2220075
+ create states
+ chashed IdToInd
+ start raily method
+ 
+ Current UP_NUM =            8
+ number           1
+ conver is    180643.469      times
+ Enegy is   1.80643463    
+ norm    2.82274365    
+ attenution    3.80376689E-02
+ 
+ 
+ Current UP_NUM =            8
+ number           3
+ conver is    57781.0195      times
+ Enegy is  0.630152822    
+ norm    2.71937990    
+ 
+ Current UP_NUM =            8
+ number           5
+ conver is    52609.0352      times
+ Enegy is -0.449210286    
+ norm    2.58125353    
+ 
+ Current UP_NUM =            8
+ number           6
+ conver is    49744.7734      times
+ Enegy is -0.946658015    
+ norm    2.50506997    
+ 
+ Current UP_NUM =            8
+ number          23
+ conver is    14417.2197      times
+ Enegy is  -5.71927977    
+ norm    1.33996272    
+ 
+ Current UP_NUM =            8
+ number          26
+ conver is    11518.4307      times
+ Enegy is  -6.09252834    
+ norm    1.19721532    
+ attenution    2.42172536E-02
+ 
+ 
+ Current UP_NUM =            8
+ number          30
+ conver is    5986.88135      times
+ Enegy is  -6.34964132    
+ norm    1.09281623    
+ 
+ Current UP_NUM =            8
+ number          34
+ conver is    5006.45654      times
+ Enegy is  -6.56380320    
+ norm   0.999386370    
+ 
+ Current UP_NUM =            8
+ number          37
+ conver is    4374.31348      times
+ Enegy is  -6.70135593    
+ norm   0.935756505    
+ 
+ Current UP_NUM =            8
+ number          39
+ conver is    4028.46338      times
+ Enegy is  -6.78357887    
+ norm   0.896351874    
+ 
+ Current UP_NUM =            8
+ number          42
+ conver is    3560.30469      times
+ Enegy is  -6.89462233    
+ norm   0.841573358    
+ 
+ Current UP_NUM =            8
+ number          46
+ conver is    2996.11108      times
+ Enegy is  -7.02285099    
+ norm   0.775972366    
+ 
+ Current UP_NUM =            8
+ number          48
+ conver is    2790.35571      times
+ Enegy is  -7.07950783    
+ norm   0.746065974    
+ attenution    2.30560601E-02
+ 
+ 
+ Current UP_NUM =            8
+ number          65
+ conver is    1486.73059      times
+ Enegy is  -7.41120625    
+ norm   0.558382034    
+ 
+ Current UP_NUM =            8
+ number          69
+ conver is    1299.19055      times
+ Enegy is  -7.46567965    
+ norm   0.525257349    
+ 
+ Current UP_NUM =            8
+ number          72
+ conver is    1208.68689      times
+ Enegy is  -7.50272512    
+ norm   0.502451897    
+ 
+ Current UP_NUM =            8
+ number          75
+ conver is    1087.52258      times
+ Enegy is  -7.53638840    
+ norm   0.481195331    
+ 
+ Current UP_NUM =            8
+ number          86
+ conver is    816.535950      times
+ Enegy is  -7.63834620    
+ norm   0.414788872    
+ attenution    2.23539583E-02
+ 
+ 
+ Current UP_NUM =            8
+ number          87
+ conver is    761.413574      times
+ Enegy is  -7.64596033    
+ norm   0.409708321    
+ 
+ Current UP_NUM =            8
+ number          91
+ conver is    698.184998      times
+ Enegy is  -7.67478752    
+ norm   0.390402019    
+ 
+ Current UP_NUM =            8
+ number         101
+ conver is    564.575195      times
+ Enegy is  -7.73644495    
+ norm   0.348675787    
+ 
+ Current UP_NUM =            8
+ number         107
+ conver is    492.906586      times
+ Enegy is  -7.76714277    
+ norm   0.327370435    
+ 
+ Current UP_NUM =            8
+ number         117
+ conver is    403.833405      times
+ Enegy is  -7.81089211    
+ norm   0.297105044    
+ 
+ Current UP_NUM =            8
+ number         118
+ conver is    399.255768      times
+ Enegy is  -7.81488466    
+ norm   0.294400215    
+ 
+ Current UP_NUM =            8
+ number         126
+ conver is    320.482269      times
+ Enegy is  -7.84361553    
+ norm   0.274600595    
+ 
+ Current UP_NUM =            8
+ number         127
+ conver is    360.918060      times
+ Enegy is  -7.84722471    
+ norm   0.272331566    
+ 
+ Current UP_NUM =            8
+ number         128
+ conver is    329.685211      times
+ Enegy is  -7.85052156    
+ norm   0.270117909    
+ 
+ Current UP_NUM =            8
+ number         130
+ conver is    328.731537      times
+ Enegy is  -7.85701704    
+ norm   0.265821040    
+ 
+ Current UP_NUM =            8
+ number         131
+ conver is    302.743927      times
+ Enegy is  -7.86004448    
+ norm   0.263733566    
+ 
+ Current UP_NUM =            8
+ number         137
+ conver is    304.317474      times
+ Enegy is  -7.87794828    
+ norm   0.252005517    
+ attenution    2.20157877E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         138
+ conver is    284.910217      times
+ Enegy is  -7.88079739    
+ norm   0.250208110    
+ 
+ Current UP_NUM =            8
+ number         140
+ conver is    269.699097      times
+ Enegy is  -7.88631964    
+ norm   0.246704370    
+ 
+ Current UP_NUM =            8
+ number         144
+ conver is    241.470337      times
+ Enegy is  -7.89663267    
+ norm   0.240105391    
+ 
+ Current UP_NUM =            8
+ number         146
+ conver is    253.486633      times
+ Enegy is  -7.90177727    
+ norm   0.236991972    
+ 
+ Current UP_NUM =            8
+ number         154
+ conver is    235.891342      times
+ Enegy is  -7.92075014    
+ norm   0.225646526    
+ 
+ Current UP_NUM =            8
+ number         156
+ conver is    215.196609      times
+ Enegy is  -7.92516518    
+ norm   0.223073825    
+ 
+ Current UP_NUM =            8
+ number         164
+ conver is    209.140778      times
+ Enegy is  -7.94205523    
+ norm   0.213683248    
+ 
+ Current UP_NUM =            8
+ number         169
+ conver is    192.308426      times
+ Enegy is  -7.95187044    
+ norm   0.208478898    
+ 
+ Current UP_NUM =            8
+ number         175
+ conver is    188.970566      times
+ Enegy is  -7.96316767    
+ norm   0.202827021    
+ 
+ Current UP_NUM =            8
+ number         178
+ conver is    166.845322      times
+ Enegy is  -7.96842718    
+ norm   0.200218856    
+ 
+ Current UP_NUM =            8
+ number         183
+ conver is    171.566010      times
+ Enegy is  -7.97706175    
+ norm   0.196156859    
+ 
+ Current UP_NUM =            8
+ number         191
+ conver is    173.377991      times
+ Enegy is  -7.99044228    
+ norm   0.190315694    
+ 
+ Current UP_NUM =            8
+ number         195
+ conver is    148.248672      times
+ Enegy is  -7.99654531    
+ norm   0.187652320    
+ 
+ Current UP_NUM =            8
+ number         196
+ conver is    160.551071      times
+ Enegy is  -7.99815083    
+ norm   0.187012464    
+ 
+ Current UP_NUM =            8
+ number         198
+ conver is    158.500671      times
+ Enegy is  -8.00122833    
+ norm   0.185754657    
+ 
+ Current UP_NUM =            8
+ number         203
+ conver is    163.555145      times
+ Enegy is  -8.00878429    
+ norm   0.182755038    
+ 
+ Current UP_NUM =            8
+ number         206
+ conver is    141.048431      times
+ Enegy is  -8.01314449    
+ norm   0.181047022    
+ attenution    2.17966437E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         208
+ conver is    130.462646      times
+ Enegy is  -8.01580811    
+ norm   0.179952413    
+ 
+ Current UP_NUM =            8
+ number         210
+ conver is    144.672394      times
+ Enegy is  -8.01864433    
+ norm   0.178881824    
+ 
+ Current UP_NUM =            8
+ number         211
+ conver is    143.432617      times
+ Enegy is  -8.02007866    
+ norm   0.178356305    
+ 
+ Current UP_NUM =            8
+ number         219
+ conver is    127.792358      times
+ Enegy is  -8.03083992    
+ norm   0.174340740    
+ attenution    2.17711013E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         221
+ conver is    137.901306      times
+ Enegy is  -8.03349209    
+ norm   0.173384354    
+ 
+ Current UP_NUM =            8
+ number         222
+ conver is    137.901306      times
+ Enegy is  -8.03487110    
+ norm   0.172913834    
+ 
+ Current UP_NUM =            8
+ number         228
+ conver is    125.885010      times
+ Enegy is  -8.04254723    
+ norm   0.170157790    
+ 
+ Current UP_NUM =            8
+ number         230
+ conver is    131.702423      times
+ Enegy is  -8.04511166    
+ norm   0.169265285    
+ 
+ Current UP_NUM =            8
+ number         243
+ conver is    119.781494      times
+ Enegy is  -8.06076336    
+ norm   0.163704470    
+ attenution    2.17344314E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         247
+ conver is    107.860565      times
+ Enegy is  -8.06534863    
+ norm   0.162058488    
+ 
+ Current UP_NUM =            8
+ number         248
+ conver is    128.746033      times
+ Enegy is  -8.06663609    
+ norm   0.161650851    
+ 
+ Current UP_NUM =            8
+ number         250
+ conver is    93.8415527      times
+ Enegy is  -8.06875134    
+ norm   0.160837367    
+ 
+ Current UP_NUM =            8
+ number         253
+ conver is    101.470947      times
+ Enegy is  -8.07214832    
+ norm   0.159625083    
+ 
+ Current UP_NUM =            8
+ number         256
+ conver is    104.331970      times
+ Enegy is  -8.07550335    
+ norm   0.158420160    
+ 
+ Current UP_NUM =            8
+ number         258
+ conver is    115.489960      times
+ Enegy is  -8.07777119    
+ norm   0.157620832    
+ 
+ Current UP_NUM =            8
+ number         274
+ conver is    97.5608826      times
+ Enegy is  -8.09436798    
+ norm   0.151265696    
+ 
+ Current UP_NUM =            8
+ number         276
+ conver is    91.0758972      times
+ Enegy is  -8.09620571    
+ norm   0.150475487    
+ 
+ Current UP_NUM =            8
+ number         279
+ conver is    97.4655151      times
+ Enegy is  -8.09924030    
+ norm   0.149287388    
+ 
+ Current UP_NUM =            8
+ number         290
+ conver is    82.4928284      times
+ Enegy is  -8.10950375    
+ norm   0.144894928    
+ 
+ Current UP_NUM =            8
+ number         301
+ conver is    96.7025757      times
+ Enegy is  -8.11916161    
+ norm   0.140464976    
+ 
+ Current UP_NUM =            8
+ number         309
+ conver is    80.5854797      times
+ Enegy is  -8.12586021    
+ norm   0.137206644    
+ 
+ Current UP_NUM =            8
+ number         310
+ conver is    83.0650330      times
+ Enegy is  -8.12669086    
+ norm   0.136796996    
+ 
+ Current UP_NUM =            8
+ number         313
+ conver is    82.1113586      times
+ Enegy is  -8.12911320    
+ norm   0.135565609    
+ 
+ Current UP_NUM =            8
+ number         319
+ conver is    74.1004944      times
+ Enegy is  -8.13371944    
+ norm   0.133096993    
+ 
+ Current UP_NUM =            8
+ number         328
+ conver is    60.0814819      times
+ Enegy is  -8.14052010    
+ norm   0.129362091    
+ 
+ Current UP_NUM =            8
+ number         329
+ conver is    66.6618347      times
+ Enegy is  -8.14118671    
+ norm   0.128945559    
+ 
+ Current UP_NUM =            8
+ number         331
+ conver is    67.0433044      times
+ Enegy is  -8.14262390    
+ norm   0.128110349    
+ 
+ Current UP_NUM =            8
+ number         332
+ conver is    74.1958618      times
+ Enegy is  -8.14336586    
+ norm   0.127691850    
+ 
+ Current UP_NUM =            8
+ number         333
+ conver is    75.7217407      times
+ Enegy is  -8.14412308    
+ norm   0.127272502    
+ 
+ Current UP_NUM =            8
+ number         335
+ conver is    65.1359558      times
+ Enegy is  -8.14546490    
+ norm   0.126435533    
+ 
+ Current UP_NUM =            8
+ number         337
+ conver is    67.9016113      times
+ Enegy is  -8.14684391    
+ norm   0.125598356    
+ 
+ Current UP_NUM =            8
+ number         338
+ conver is    65.5174255      times
+ Enegy is  -8.14749908    
+ norm   0.125179529    
+ 
+ Current UP_NUM =            8
+ number         340
+ conver is    74.1004944      times
+ Enegy is  -8.14884758    
+ norm   0.124340825    
+ 
+ Current UP_NUM =            8
+ number         343
+ conver is    66.8525696      times
+ Enegy is  -8.15089893    
+ norm   0.123081572    
+ 
+ Current UP_NUM =            8
+ number         345
+ conver is    63.1332397      times
+ Enegy is  -8.15209961    
+ norm   0.122240126    
+ 
+ Current UP_NUM =            8
+ number         348
+ conver is    69.5228577      times
+ Enegy is  -8.15422058    
+ norm   0.120979920    
+ 
+ Current UP_NUM =            8
+ number         357
+ conver is    48.3512878      times
+ Enegy is  -8.15983677    
+ norm   0.117191561    
+ 
+ Current UP_NUM =            8
+ number         360
+ conver is    71.7163086      times
+ Enegy is  -8.16177750    
+ norm   0.115932979    
+ 
+ Current UP_NUM =            8
+ number         361
+ conver is    52.9289246      times
+ Enegy is  -8.16230679    
+ norm   0.115514226    
+ 
+ Current UP_NUM =            8
+ number         364
+ conver is    52.7381897      times
+ Enegy is  -8.16401386    
+ norm   0.114257745    
+ attenution    2.16620155E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         365
+ conver is    50.1632690      times
+ Enegy is  -8.16451550    
+ norm   0.113840260    
+ 
+ Current UP_NUM =            8
+ number         366
+ conver is    56.4575195      times
+ Enegy is  -8.16508007    
+ norm   0.113421082    
+ 
+ Current UP_NUM =            8
+ number         374
+ conver is    54.8362732      times
+ Enegy is  -8.16937828    
+ norm   0.110089071    
+ 
+ Current UP_NUM =            8
+ number         375
+ conver is    53.3103943      times
+ Enegy is  -8.16991138    
+ norm   0.109674171    
+ 
+ Current UP_NUM =            8
+ number         379
+ conver is    43.2014465      times
+ Enegy is  -8.17189407    
+ norm   0.108021311    
+ 
+ Current UP_NUM =            8
+ number         384
+ conver is    46.0624695      times
+ Enegy is  -8.17445564    
+ norm   0.105967753    
+ 
+ Current UP_NUM =            8
+ number         390
+ conver is    45.5856323      times
+ Enegy is  -8.17726040    
+ norm   0.103513524    
+ 
+ Current UP_NUM =            8
+ number         394
+ conver is    42.5338745      times
+ Enegy is  -8.17911148    
+ norm   0.101892054    
+ 
+ Current UP_NUM =            8
+ number         399
+ conver is    45.4902649      times
+ Enegy is  -8.18132973    
+ norm    9.98781398E-02
+ 
+ Current UP_NUM =            8
+ number         400
+ conver is    47.8744507      times
+ Enegy is  -8.18180847    
+ norm    9.94772911E-02
+ 
+ Current UP_NUM =            8
+ number         407
+ conver is    32.9971313      times
+ Enegy is  -8.18465614    
+ norm    9.66925323E-02
+ 
+ Current UP_NUM =            8
+ number         413
+ conver is    44.2504883      times
+ Enegy is  -8.18706608    
+ norm    9.43387970E-02
+ 
+ Current UP_NUM =            8
+ number         421
+ conver is    30.8036804      times
+ Enegy is  -8.19002247    
+ norm    9.12433863E-02
+ 
+ Current UP_NUM =            8
+ number         424
+ conver is    37.0025635      times
+ Enegy is  -8.19102192    
+ norm    9.00972486E-02
+ 
+ Current UP_NUM =            8
+ number         425
+ conver is    40.4357910      times
+ Enegy is  -8.19142628    
+ norm    8.97168145E-02
+ 
+ Current UP_NUM =            8
+ number         439
+ conver is    31.0897827      times
+ Enegy is  -8.19600964    
+ norm    8.44905674E-02
+ 
+ Current UP_NUM =            8
+ number         444
+ conver is    34.1415405      times
+ Enegy is  -8.19755077    
+ norm    8.26714039E-02
+ 
+ Current UP_NUM =            8
+ number         447
+ conver is    31.1851501      times
+ Enegy is  -8.19845295    
+ norm    8.15923139E-02
+ 
+ Current UP_NUM =            8
+ number         448
+ conver is    27.9426575      times
+ Enegy is  -8.19873238    
+ norm    8.12353343E-02
+ 
+ Current UP_NUM =            8
+ number         474
+ conver is    23.5557556      times
+ Enegy is  -8.20538139    
+ norm    7.23371953E-02
+ 
+ Current UP_NUM =            8
+ number         490
+ conver is    19.1688538      times
+ Enegy is  -8.20883083    
+ norm    6.72528520E-02
+ 
+ Current UP_NUM =            8
+ number         491
+ conver is    21.8391418      times
+ Enegy is  -8.20904922    
+ norm    6.69446066E-02
+ 
+ Current UP_NUM =            8
+ number         500
+ conver is    13.8282776      times
+ Enegy is  -8.21062279    
+ norm    6.42253086E-02
+ 
+ Current UP_NUM =            8
+ number         507
+ conver is    17.6429749      times
+ Enegy is  -8.21201038    
+ norm    6.21742308E-02
+ 
+ Current UP_NUM =            8
+ number         511
+ conver is    15.2587891      times
+ Enegy is  -8.21264648    
+ norm    6.10271618E-02
+ 
+ Current UP_NUM =            8
+ number         513
+ conver is    20.0271606      times
+ Enegy is  -8.21298790    
+ norm    6.04602098E-02
+ 
+ Current UP_NUM =            8
+ number         519
+ conver is    12.3023987      times
+ Enegy is  -8.21388054    
+ norm    5.87872863E-02
+ 
+ Current UP_NUM =            8
+ number         531
+ conver is    12.2070312      times
+ Enegy is  -8.21544933    
+ norm    5.55660091E-02
+ 
+ Current UP_NUM =            8
+ number         534
+ conver is    9.91821289      times
+ Enegy is  -8.21589661    
+ norm    5.47849499E-02
+ 
+ Current UP_NUM =            8
+ number         536
+ conver is    17.0707703      times
+ Enegy is  -8.21607018    
+ norm    5.42700291E-02
+ 
+ Current UP_NUM =            8
+ number         537
+ conver is    8.48770142      times
+ Enegy is  -8.21615505    
+ norm    5.40144779E-02
+ attenution    2.16343943E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         543
+ conver is    16.8800354      times
+ Enegy is  -8.21702576    
+ norm    5.25089987E-02
+ 
+ Current UP_NUM =            8
+ number         549
+ conver is    2.57492065      times
+ Enegy is  -8.21778107    
+ norm    5.10401875E-02
+ 
+ Current UP_NUM =            8
+ number         552
+ conver is    18.1198120      times
+ Enegy is  -8.21833134    
+ norm    5.03217503E-02
+ attenution    2.16374621E-02
+ 
+ 
+ Current UP_NUM =            8
+ number         554
+ conver is    14.5912170      times
+ Enegy is  -8.21856308    
+ norm    4.98480387E-02
+ 
+ Current UP_NUM =            8
+ number         568
+ conver is    7.43865967      times
+ Enegy is  -8.21988964    
+ norm    4.66473289E-02
+ 
+ Current UP_NUM =            8
+ number         585
+ conver is    9.53674316      times
+ Enegy is  -8.22126007    
+ norm    4.30225208E-02
+ 
+ Current UP_NUM =            8
+ number         586
+ conver is    10.4904175      times
+ Enegy is  -8.22136497    
+ norm    4.28179614E-02
+ 
+ Current UP_NUM =            8
+ number         588
+ conver is    11.7301941      times
+ Enegy is  -8.22155476    
+ norm    4.24114913E-02
+ 
+ Current UP_NUM =            8
+ number         590
+ conver is    3.24249268      times
+ Enegy is  -8.22164154    
+ norm    4.20089364E-02
+ 
+ Current UP_NUM =            8
+ number         603
+ conver is    9.15527344      times
+ Enegy is  -8.22243881    
+ norm    3.94837856E-02
+ 
+ Current UP_NUM =            8
+ number         605
+ conver is    15.6402588      times
+ Enegy is  -8.22279739    
+ norm    3.91082205E-02
+ 
+ Current UP_NUM =            8
+ number         607
+ conver is    5.72204590      times
+ Enegy is  -8.22289848    
+ norm    3.87370549E-02
+         608
+  -8.22289658    
+ UP_NUM =            9
+ HamilSize      4686825
+ create states
+ chashed IdToInd
+ start raily method
+ attenution    3.58882882E-02
+ 
+ 
+ Current UP_NUM =            9
+ number           4
+ conver is    57479.3789      times
+ Enegy is -0.748110592    
+ norm    2.78618383    
+ 
+ Current UP_NUM =            9
+ number           6
+ conver is    52166.8555      times
+ Enegy is  -1.81871593    
+ norm    2.64121389    
+ 
+ Current UP_NUM =            9
+ number           7
+ conver is    49456.1562      times
+ Enegy is  -2.31327748    
+ norm    2.56333184    
+ 
+ Current UP_NUM =            9
+ number          13
+ conver is    32447.3398      times
+ Enegy is  -4.67107821    
+ norm    2.08784103    
+ 
+ Current UP_NUM =            9
+ number          17
+ conver is    24512.6250      times
+ Enegy is  -5.76509905    
+ norm    1.80164444    
+ 
+ Current UP_NUM =            9
+ number          20
+ conver is    19727.8496      times
+ Enegy is  -6.40146923    
+ norm    1.61190569    
+ 
+ Current UP_NUM =            9
+ number          21
+ conver is    18313.9805      times
+ Enegy is  -6.58460903    
+ norm    1.55399358    
+ 
+ Current UP_NUM =            9
+ number          22
+ conver is    16968.3457      times
+ Enegy is  -6.75429249    
+ norm    1.49839556    
+ 
+ Current UP_NUM =            9
+ number          24
+ conver is    14788.7715      times
+ Enegy is  -7.06052780    
+ norm    1.39448452    
+ 
+ Current UP_NUM =            9
+ number          25
+ conver is    13711.0234      times
+ Enegy is  -7.19763803    
+ norm    1.34538424    
+ 
+ Current UP_NUM =            9
+ number          26
+ conver is    12777.1377      times
+ Enegy is  -7.32540941    
+ norm    1.29854369    
+ 
+ Current UP_NUM =            9
+ number          27
+ conver is    11935.6631      times
+ Enegy is  -7.44476604    
+ norm    1.25380659    
+ 
+ Current UP_NUM =            9
+ number          29
+ conver is    10432.5293      times
+ Enegy is  -7.66101551    
+ norm    1.17047095    
+ 
+ Current UP_NUM =            9
+ number          30
+ conver is    9689.37891      times
+ Enegy is  -7.75790930    
+ norm    1.13170564    
+ 
+ Current UP_NUM =            9
+ number          31
+ conver is    9063.43457      times
+ Enegy is  -7.84854364    
+ norm    1.09473419    
+ attenution    2.23074108E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          33
+ conver is    5069.39893      times
+ Enegy is  -7.95262384    
+ norm    1.05234480    
+ 
+ Current UP_NUM =            9
+ number          35
+ conver is    4678.91699      times
+ Enegy is  -8.04874516    
+ norm    1.01215160    
+ 
+ Current UP_NUM =            9
+ number          36
+ conver is    4525.75684      times
+ Enegy is  -8.09400272    
+ norm   0.992701232    
+ 
+ Current UP_NUM =            9
+ number          37
+ conver is    4331.68408      times
+ Enegy is  -8.13731956    
+ norm   0.973630726    
+ 
+ Current UP_NUM =            9
+ number          39
+ conver is    4072.95239      times
+ Enegy is  -8.21936893    
+ norm   0.937099934    
+ 
+ Current UP_NUM =            9
+ number          42
+ conver is    3564.16699      times
+ Enegy is  -8.33078575    
+ norm   0.885901272    
+ 
+ Current UP_NUM =            9
+ number          44
+ conver is    3315.06738      times
+ Enegy is  -8.39832783    
+ norm   0.854084253    
+ 
+ Current UP_NUM =            9
+ number          45
+ conver is    3224.56372      times
+ Enegy is  -8.43057346    
+ norm   0.838730454    
+ 
+ Current UP_NUM =            9
+ number          46
+ conver is    3124.42798      times
+ Enegy is  -8.46181774    
+ norm   0.823844016    
+ attenution    2.16628462E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          47
+ conver is    2909.85107      times
+ Enegy is  -8.49091625    
+ norm   0.809749722    
+ 
+ Current UP_NUM =            9
+ number          51
+ conver is    2549.07617      times
+ Enegy is  -8.59772015    
+ norm   0.756954491    
+ 
+ Current UP_NUM =            9
+ number          52
+ conver is    2461.62427      times
+ Enegy is  -8.62233639    
+ norm   0.744575083    
+ 
+ Current UP_NUM =            9
+ number          53
+ conver is    2324.96265      times
+ Enegy is  -8.64558601    
+ norm   0.732499599    
+ attenution    2.14897878E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          55
+ conver is    2214.62256      times
+ Enegy is  -8.69073296    
+ norm   0.709392786    
+ attenution    2.14473624E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          58
+ conver is    2015.49536      times
+ Enegy is  -8.75291061    
+ norm   0.676439404    
+ attenution    2.13668663E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          62
+ conver is    1802.34912      times
+ Enegy is  -8.82732677    
+ norm   0.636131167    
+ 
+ Current UP_NUM =            9
+ number          63
+ conver is    1706.21875      times
+ Enegy is  -8.84438896    
+ norm   0.626605988    
+ 
+ Current UP_NUM =            9
+ number          66
+ conver is    1560.21118      times
+ Enegy is  -8.89295292    
+ norm   0.599300861    
+ 
+ Current UP_NUM =            9
+ number          68
+ conver is    1488.68567      times
+ Enegy is  -8.92287827    
+ norm   0.582047045    
+ 
+ Current UP_NUM =            9
+ number          69
+ conver is    1456.92834      times
+ Enegy is  -8.93744755    
+ norm   0.573733926    
+ 
+ Current UP_NUM =            9
+ number          70
+ conver is    1374.81689      times
+ Enegy is  -8.95119572    
+ norm   0.565590382    
+ 
+ Current UP_NUM =            9
+ number          71
+ conver is    1382.54175      times
+ Enegy is  -8.96502113    
+ norm   0.557596505    
+ 
+ Current UP_NUM =            9
+ number          72
+ conver is    1334.38110      times
+ Enegy is  -8.97836494    
+ norm   0.549805284    
+ attenution    2.11375188E-02
+ 
+ 
+ Current UP_NUM =            9
+ number          73
+ conver is    1283.45496      times
+ Enegy is  -8.99119949    
+ norm   0.542258441    
+ 
+ Current UP_NUM =            9
+ number          74
+ conver is    1257.61035      times
+ Enegy is  -9.00377560    
+ norm   0.534887373    
+ 
+ Current UP_NUM =            9
+ number          75
+ conver is    1178.64612      times
+ Enegy is  -9.01556206    
+ norm   0.527657211    
+ 
+ Current UP_NUM =            9
+ number          77
+ conver is    1106.64368      times
+ Enegy is  -9.03802204    
+ norm   0.513566315    
+ 
+ Current UP_NUM =            9
+ number          81
+ conver is    992.202759      times
+ Enegy is  -9.07997131    
+ norm   0.486945987    
+ 
+ Current UP_NUM =            9
+ number          83
+ conver is    978.660583      times
+ Enegy is  -9.09955311    
+ norm   0.474324226    
+ 
+ Current UP_NUM =            9
+ number          89
+ conver is    824.642212      times
+ Enegy is  -9.15254498    
+ norm   0.439337671    
+ 
+ Current UP_NUM =            9
+ number          90
+ conver is    807.571411      times
+ Enegy is  -9.16062069    
+ norm   0.433870226    
+ 
+ Current UP_NUM =            9
+ number          93
+ conver is    751.304626      times
+ Enegy is  -9.18370152    
+ norm   0.418136299    
+ 
+ Current UP_NUM =            9
+ number          97
+ conver is    689.506531      times
+ Enegy is  -9.21181393    
+ norm   0.398468733    
+ 
+ Current UP_NUM =            9
+ number          98
+ conver is    672.435791      times
+ Enegy is  -9.21853828    
+ norm   0.393781006    
+ 
+ Current UP_NUM =            9
+ number          99
+ conver is    633.239746      times
+ Enegy is  -9.22487068    
+ norm   0.389177054    
+ 
+ Current UP_NUM =            9
+ number         109
+ conver is    527.668030      times
+ Enegy is  -9.28279495    
+ norm   0.347397715    
+ 
+ Current UP_NUM =            9
+ number         110
+ conver is    505.161285      times
+ Enegy is  -9.28784657    
+ norm   0.343591630    
+ 
+ Current UP_NUM =            9
+ number         112
+ conver is    488.185883      times
+ Enegy is  -9.29751110    
+ norm   0.336159199    
+ 
+ Current UP_NUM =            9
+ number         114
+ conver is    442.695618      times
+ Enegy is  -9.30676460    
+ norm   0.328982443    
+ 
+ Current UP_NUM =            9
+ number         118
+ conver is    409.221649      times
+ Enegy is  -9.32413483    
+ norm   0.315370947    
+ 
+ Current UP_NUM =            9
+ number         120
+ conver is    428.295135      times
+ Enegy is  -9.33259487    
+ norm   0.308910519    
+ 
+ Current UP_NUM =            9
+ number         123
+ conver is    407.028198      times
+ Enegy is  -9.34438133    
+ norm   0.299608588    
+ 
+ Current UP_NUM =            9
+ number         125
+ conver is    363.540649      times
+ Enegy is  -9.35166359    
+ norm   0.293690860    
+ 
+ Current UP_NUM =            9
+ number         128
+ conver is    351.047516      times
+ Enegy is  -9.36243439    
+ norm   0.285165787    
+ 
+ Current UP_NUM =            9
+ number         129
+ conver is    327.014923      times
+ Enegy is  -9.36570454    
+ norm   0.282415241    
+ 
+ Current UP_NUM =            9
+ number         131
+ conver is    309.658051      times
+ Enegy is  -9.37215328    
+ norm   0.277047783    
+ 
+ Current UP_NUM =            9
+ number         135
+ conver is    312.519073      times
+ Enegy is  -9.38480759    
+ norm   0.266866595    
+ attenution    2.06900593E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         136
+ conver is    265.121460      times
+ Enegy is  -9.38745880    
+ norm   0.264487326    
+ 
+ Current UP_NUM =            9
+ number         142
+ conver is    267.219543      times
+ Enegy is  -9.40418434    
+ norm   0.250855803    
+ 
+ Current UP_NUM =            9
+ number         143
+ conver is    261.211395      times
+ Enegy is  -9.40679646    
+ norm   0.248701930    
+ 
+ Current UP_NUM =            9
+ number         144
+ conver is    239.944458      times
+ Enegy is  -9.40919590    
+ norm   0.246571302    
+ attenution    2.06598099E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         146
+ conver is    231.266022      times
+ Enegy is  -9.41405010    
+ norm   0.242414758    
+ 
+ Current UP_NUM =            9
+ number         148
+ conver is    236.701965      times
+ Enegy is  -9.41878700    
+ norm   0.238377944    
+ 
+ Current UP_NUM =            9
+ number         149
+ conver is    244.140625      times
+ Enegy is  -9.42122841    
+ norm   0.236403540    
+ 
+ Current UP_NUM =            9
+ number         150
+ conver is    218.582153      times
+ Enegy is  -9.42341423    
+ norm   0.234465703    
+ 
+ Current UP_NUM =            9
+ number         151
+ conver is    219.631195      times
+ Enegy is  -9.42561054    
+ norm   0.232553542    
+ attenution    2.06239969E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         152
+ conver is    234.889984      times
+ Enegy is  -9.42795944    
+ norm   0.230671257    
+ 
+ Current UP_NUM =            9
+ number         153
+ conver is    204.372406      times
+ Enegy is  -9.43000317    
+ norm   0.228824526    
+ 
+ Current UP_NUM =            9
+ number         156
+ conver is    214.481354      times
+ Enegy is  -9.43677139    
+ norm   0.223428398    
+ 
+ Current UP_NUM =            9
+ number         159
+ conver is    201.988220      times
+ Enegy is  -9.44280148    
+ norm   0.218275800    
+ attenution    2.05983818E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         161
+ conver is    190.830231      times
+ Enegy is  -9.44672203    
+ norm   0.214961737    
+ 
+ Current UP_NUM =            9
+ number         163
+ conver is    178.241730      times
+ Enegy is  -9.45035267    
+ norm   0.211752698    
+ 
+ Current UP_NUM =            9
+ number         164
+ conver is    197.505951      times
+ Enegy is  -9.45232773    
+ norm   0.210186347    
+ 
+ Current UP_NUM =            9
+ number         166
+ conver is    181.484222      times
+ Enegy is  -9.45595837    
+ norm   0.207100600    
+ 
+ Current UP_NUM =            9
+ number         168
+ conver is    185.585022      times
+ Enegy is  -9.45946121    
+ norm   0.204111800    
+ attenution    2.05822214E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         169
+ conver is    169.086456      times
+ Enegy is  -9.46115208    
+ norm   0.202646449    
+ 
+ Current UP_NUM =            9
+ number         170
+ conver is    153.541565      times
+ Enegy is  -9.46268749    
+ norm   0.201198936    
+ 
+ Current UP_NUM =            9
+ number         172
+ conver is    167.369843      times
+ Enegy is  -9.46603394    
+ norm   0.198377222    
+ 
+ Current UP_NUM =            9
+ number         174
+ conver is    145.053864      times
+ Enegy is  -9.46913624    
+ norm   0.195628658    
+ 
+ Current UP_NUM =            9
+ number         179
+ conver is    157.833099      times
+ Enegy is  -9.47684383    
+ norm   0.189087927    
+ 
+ Current UP_NUM =            9
+ number         180
+ conver is    169.086456      times
+ Enegy is  -9.47853470    
+ norm   0.187830403    
+ 
+ Current UP_NUM =            9
+ number         181
+ conver is    153.350830      times
+ Enegy is  -9.48006821    
+ norm   0.186585069    
+ 
+ Current UP_NUM =            9
+ number         182
+ conver is    132.656097      times
+ Enegy is  -9.48139477    
+ norm   0.185357869    
+ 
+ Current UP_NUM =            9
+ number         183
+ conver is    146.198273      times
+ Enegy is  -9.48285675    
+ norm   0.184141383    
+ attenution    2.05555614E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         184
+ conver is    136.566162      times
+ Enegy is  -9.48422241    
+ norm   0.182953432    
+ 
+ Current UP_NUM =            9
+ number         185
+ conver is    133.514404      times
+ Enegy is  -9.48555756    
+ norm   0.181778774    
+ 
+ Current UP_NUM =            9
+ number         187
+ conver is    122.547150      times
+ Enegy is  -9.48827171    
+ norm   0.179467738    
+ 
+ Current UP_NUM =            9
+ number         190
+ conver is    147.247314      times
+ Enegy is  -9.49225998    
+ norm   0.176110223    
+ 
+ Current UP_NUM =            9
+ number         191
+ conver is    128.936768      times
+ Enegy is  -9.49354935    
+ norm   0.175014019    
+ 
+ Current UP_NUM =            9
+ number         193
+ conver is    122.737885      times
+ Enegy is  -9.49604607    
+ norm   0.172863692    
+ 
+ Current UP_NUM =            9
+ number         194
+ conver is    121.879578      times
+ Enegy is  -9.49726486    
+ norm   0.171806723    
+ 
+ Current UP_NUM =            9
+ number         195
+ conver is    95.7489014      times
+ Enegy is  -9.49822235    
+ norm   0.170769125    
+ 
+ Current UP_NUM =            9
+ number         198
+ conver is    116.539001      times
+ Enegy is  -9.50166893    
+ norm   0.167717502    
+ 
+ Current UP_NUM =            9
+ number         199
+ conver is    114.822388      times
+ Enegy is  -9.50281715    
+ norm   0.166725263    
+ 
+ Current UP_NUM =            9
+ number         200
+ conver is    117.015839      times
+ Enegy is  -9.50398731    
+ norm   0.165742621    
+ 
+ Current UP_NUM =            9
+ number         201
+ conver is    126.552582      times
+ Enegy is  -9.50525284    
+ norm   0.164772913    
+ 
+ Current UP_NUM =            9
+ number         203
+ conver is    103.569031      times
+ Enegy is  -9.50741100    
+ norm   0.162871107    
+ 
+ Current UP_NUM =            9
+ number         204
+ conver is    104.045868      times
+ Enegy is  -9.50845146    
+ norm   0.161938071    
+ 
+ Current UP_NUM =            9
+ number         205
+ conver is    112.915039      times
+ Enegy is  -9.50958061    
+ norm   0.161016151    
+ 
+ Current UP_NUM =            9
+ number         209
+ conver is    107.383728      times
+ Enegy is  -9.51374912    
+ norm   0.157435477    
+ 
+ Current UP_NUM =            9
+ number         211
+ conver is    79.0596008      times
+ Enegy is  -9.51558971    
+ norm   0.155709475    
+ 
+ Current UP_NUM =            9
+ number         212
+ conver is    89.0731812      times
+ Enegy is  -9.51648045    
+ norm   0.154863477    
+ 
+ Current UP_NUM =            9
+ number         213
+ conver is    85.5445862      times
+ Enegy is  -9.51733589    
+ norm   0.154025927    
+ 
+ Current UP_NUM =            9
+ number         216
+ conver is    99.9450684      times
+ Enegy is  -9.52030659    
+ norm   0.151565120    
+ 
+ Current UP_NUM =            9
+ number         218
+ conver is    74.8634338      times
+ Enegy is  -9.52217960    
+ norm   0.149964824    
+ 
+ Current UP_NUM =            9
+ number         219
+ conver is    78.3920288      times
+ Enegy is  -9.52296352    
+ norm   0.149184480    
+ 
+ Current UP_NUM =            9
+ number         222
+ conver is    85.0677490      times
+ Enegy is  -9.52574730    
+ norm   0.146878526    
+ 
+ Current UP_NUM =            9
+ number         224
+ conver is    102.329254      times
+ Enegy is  -9.52755356    
+ norm   0.145379648    
+ attenution    2.04797499E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         227
+ conver is    91.0758972      times
+ Enegy is  -9.52998638    
+ norm   0.143201232    
+ 
+ Current UP_NUM =            9
+ number         228
+ conver is    83.2557678      times
+ Enegy is  -9.53081894    
+ norm   0.142494157    
+ 
+ Current UP_NUM =            9
+ number         230
+ conver is    86.6889954      times
+ Enegy is  -9.53241158    
+ norm   0.141100779    
+ 
+ Current UP_NUM =            9
+ number         232
+ conver is    81.2530518      times
+ Enegy is  -9.53394222    
+ norm   0.139731601    
+ 
+ Current UP_NUM =            9
+ number         234
+ conver is    75.7217407      times
+ Enegy is  -9.53543282    
+ norm   0.138395905    
+ 
+ Current UP_NUM =            9
+ number         235
+ conver is    74.3865967      times
+ Enegy is  -9.53617668    
+ norm   0.137741700    
+ 
+ Current UP_NUM =            9
+ number         236
+ conver is    75.0541687      times
+ Enegy is  -9.53692722    
+ norm   0.137085855    
+ attenution    2.04656590E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         237
+ conver is    62.4656677      times
+ Enegy is  -9.53755188    
+ norm   0.136445329    
+ 
+ Current UP_NUM =            9
+ number         238
+ conver is    85.9260559      times
+ Enegy is  -9.53841114    
+ norm   0.135805175    
+ 
+ Current UP_NUM =            9
+ number         239
+ conver is    72.9560852      times
+ Enegy is  -9.53914070    
+ norm   0.135174081    
+ 
+ Current UP_NUM =            9
+ number         242
+ conver is    62.8471375      times
+ Enegy is  -9.54127598    
+ norm   0.133315504    
+ 
+ Current UP_NUM =            9
+ number         248
+ conver is    71.1441040      times
+ Enegy is  -9.54572392    
+ norm   0.129730865    
+ 
+ Current UP_NUM =            9
+ number         250
+ conver is    52.4520874      times
+ Enegy is  -9.54695511    
+ norm   0.128590435    
+ 
+ Current UP_NUM =            9
+ number         251
+ conver is    58.3648682      times
+ Enegy is  -9.54753876    
+ norm   0.128034055    
+ 
+ Current UP_NUM =            9
+ number         254
+ conver is    87.9287720      times
+ Enegy is  -9.54954243    
+ norm   0.126365304    
+ 
+ Current UP_NUM =            9
+ number         256
+ conver is    68.6645508      times
+ Enegy is  -9.55088329    
+ norm   0.125283569    
+ 
+ Current UP_NUM =            9
+ number         258
+ conver is    63.7054443      times
+ Enegy is  -9.55214977    
+ norm   0.124212332    
+ 
+ Current UP_NUM =            9
+ number         260
+ conver is    51.4984131      times
+ Enegy is  -9.55325603    
+ norm   0.123163357    
+ 
+ Current UP_NUM =            9
+ number         262
+ conver is    63.7054443      times
+ Enegy is  -9.55454826    
+ norm   0.122124784    
+ 
+ Current UP_NUM =            9
+ number         263
+ conver is    72.4792480      times
+ Enegy is  -9.55527306    
+ norm   0.121608466    
+ 
+ Current UP_NUM =            9
+ number         264
+ conver is    58.4602356      times
+ Enegy is  -9.55585766    
+ norm   0.121103041    
+ attenution    2.04427466E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         265
+ conver is    83.4465027      times
+ Enegy is  -9.55669212    
+ norm   0.120594211    
+ 
+ Current UP_NUM =            9
+ number         268
+ conver is    63.8961792      times
+ Enegy is  -9.55842495    
+ norm   0.119111016    
+ 
+ Current UP_NUM =            9
+ number         269
+ conver is    42.9153442      times
+ Enegy is  -9.55885410    
+ norm   0.118632056    
+ 
+ Current UP_NUM =            9
+ number         270
+ conver is    66.3757324      times
+ Enegy is  -9.55951786    
+ norm   0.118148595    
+ 
+ Current UP_NUM =            9
+ number         274
+ conver is    48.8281250      times
+ Enegy is  -9.56171131    
+ norm   0.116269447    
+ 
+ Current UP_NUM =            9
+ number         276
+ conver is    52.3567200      times
+ Enegy is  -9.56267929    
+ norm   0.115354151    
+ 
+ Current UP_NUM =            9
+ number         278
+ conver is    47.4929810      times
+ Enegy is  -9.56373596    
+ norm   0.114448562    
+ 
+ Current UP_NUM =            9
+ number         281
+ conver is    47.9698181      times
+ Enegy is  -9.56520271    
+ norm   0.113123015    
+ 
+ Current UP_NUM =            9
+ number         283
+ conver is    50.0679016      times
+ Enegy is  -9.56618118    
+ norm   0.112255402    
+ attenution    2.04178933E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         284
+ conver is    57.0297241      times
+ Enegy is  -9.56675148    
+ norm   0.111822158    
+ 
+ Current UP_NUM =            9
+ number         285
+ conver is    33.8554382      times
+ Enegy is  -9.56709003    
+ norm   0.111405015    
+ 
+ Current UP_NUM =            9
+ number         286
+ conver is    39.4821167      times
+ Enegy is  -9.56748486    
+ norm   0.110987939    
+ 
+ Current UP_NUM =            9
+ number         289
+ conver is    53.8825989      times
+ Enegy is  -9.56892776    
+ norm   0.109739035    
+ 
+ Current UP_NUM =            9
+ number         291
+ conver is    52.5474548      times
+ Enegy is  -9.56980324    
+ norm   0.108925089    
+ 
+ Current UP_NUM =            9
+ number         292
+ conver is    45.5856323      times
+ Enegy is  -9.57025909    
+ norm   0.108520858    
+ 
+ Current UP_NUM =            9
+ number         294
+ conver is    45.6809998      times
+ Enegy is  -9.57129002    
+ norm   0.107714154    
+ 
+ Current UP_NUM =            9
+ number         298
+ conver is    31.8527222      times
+ Enegy is  -9.57304859    
+ norm   0.106147066    
+ 
+ Current UP_NUM =            9
+ number         299
+ conver is    33.9508057      times
+ Enegy is  -9.57338810    
+ norm   0.105767474    
+ 
+ Current UP_NUM =            9
+ number         300
+ conver is    49.2095947      times
+ Enegy is  -9.57388020    
+ norm   0.105380222    
+ 
+ Current UP_NUM =            9
+ number         302
+ conver is    47.9698181      times
+ Enegy is  -9.57474613    
+ norm   0.104619525    
+ 
+ Current UP_NUM =            9
+ number         305
+ conver is    48.0651855      times
+ Enegy is  -9.57612038    
+ norm   0.103492066    
+ 
+ Current UP_NUM =            9
+ number         306
+ conver is    43.1060791      times
+ Enegy is  -9.57655144    
+ norm   0.103122368    
+ 
+ Current UP_NUM =            9
+ number         309
+ conver is    30.3268433      times
+ Enegy is  -9.57782173    
+ norm   0.102031521    
+ 
+ Current UP_NUM =            9
+ number         311
+ conver is    45.6809998      times
+ Enegy is  -9.57878208    
+ norm   0.101310574    
+ 
+ Current UP_NUM =            9
+ number         313
+ conver is    29.1824341      times
+ Enegy is  -9.57932091    
+ norm   0.100619309    
+ 
+ Current UP_NUM =            9
+ number         314
+ conver is    35.0952148      times
+ Enegy is  -9.57967186    
+ norm   0.100271806    
+ 
+ Current UP_NUM =            9
+ number         315
+ conver is    54.2640686      times
+ Enegy is  -9.58021450    
+ norm    9.99137163E-02
+ 
+ Current UP_NUM =            9
+ number         316
+ conver is    24.7001648      times
+ Enegy is  -9.58046150    
+ norm    9.95762944E-02
+ 
+ Current UP_NUM =            9
+ number         317
+ conver is    52.1659851      times
+ Enegy is  -9.58098316    
+ norm    9.92244035E-02
+ 
+ Current UP_NUM =            9
+ number         318
+ conver is    39.7682190      times
+ Enegy is  -9.58138084    
+ norm    9.88808498E-02
+ 
+ Current UP_NUM =            9
+ number         319
+ conver is    46.1578369      times
+ Enegy is  -9.58184242    
+ norm    9.85381529E-02
+ 
+ Current UP_NUM =            9
+ number         321
+ conver is    44.2504883      times
+ Enegy is  -9.58272839    
+ norm    9.78602022E-02
+ 
+ Current UP_NUM =            9
+ number         325
+ conver is    28.2287598      times
+ Enegy is  -9.58413124    
+ norm    9.65433046E-02
+ 
+ Current UP_NUM =            9
+ number         327
+ conver is    40.1496887      times
+ Enegy is  -9.58493614    
+ norm    9.58907455E-02
+ 
+ Current UP_NUM =            9
+ number         330
+ conver is    31.3758850      times
+ Enegy is  -9.58600426    
+ norm    9.49313343E-02
+ 
+ Current UP_NUM =            9
+ number         331
+ conver is    30.9944153      times
+ Enegy is  -9.58631420    
+ norm    9.46162641E-02
+ 
+ Current UP_NUM =            9
+ number         335
+ conver is    29.3731689      times
+ Enegy is  -9.58768940    
+ norm    9.33726504E-02
+ 
+ Current UP_NUM =            9
+ number         336
+ conver is    37.9562378      times
+ Enegy is  -9.58806896    
+ norm    9.30621326E-02
+ 
+ Current UP_NUM =            9
+ number         338
+ conver is    30.2314758      times
+ Enegy is  -9.58857536    
+ norm    9.24640894E-02
+ 
+ Current UP_NUM =            9
+ number         339
+ conver is    35.8581543      times
+ Enegy is  -9.58893394    
+ norm    9.21584293E-02
+ 
+ Current UP_NUM =            9
+ number         341
+ conver is    41.2940979      times
+ Enegy is  -9.58979416    
+ norm    9.15476456E-02
+ 
+ Current UP_NUM =            9
+ number         343
+ conver is    40.4357910      times
+ Enegy is  -9.59043217    
+ norm    9.09554064E-02
+ 
+ Current UP_NUM =            9
+ number         345
+ conver is    39.2913818      times
+ Enegy is  -9.59111786    
+ norm    9.03683156E-02
+ 
+ Current UP_NUM =            9
+ number         348
+ conver is    26.3214111      times
+ Enegy is  -9.59215164    
+ norm    8.94905031E-02
+ 
+ Current UP_NUM =            9
+ number         350
+ conver is    22.5067139      times
+ Enegy is  -9.59286404    
+ norm    8.89113322E-02
+ 
+ Current UP_NUM =            9
+ number         353
+ conver is    33.3786011      times
+ Enegy is  -9.59384632    
+ norm    8.80590230E-02
+ 
+ Current UP_NUM =            9
+ number         359
+ conver is    26.5121460      times
+ Enegy is  -9.59554958    
+ norm    8.63948390E-02
+ 
+ Current UP_NUM =            9
+ number         361
+ conver is    28.8963318      times
+ Enegy is  -9.59626865    
+ norm    8.58407766E-02
+ 
+ Current UP_NUM =            9
+ number         363
+ conver is    45.3948975      times
+ Enegy is  -9.59702206    
+ norm    8.52874070E-02
+ attenution    2.03885660E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         366
+ conver is    29.3731689      times
+ Enegy is  -9.59786129    
+ norm    8.44892934E-02
+ 
+ Current UP_NUM =            9
+ number         370
+ conver is    21.2669373      times
+ Enegy is  -9.59879589    
+ norm    8.34541023E-02
+ 
+ Current UP_NUM =            9
+ number         371
+ conver is    20.6947327      times
+ Enegy is  -9.59900284    
+ norm    8.32004771E-02
+ 
+ Current UP_NUM =            9
+ number         372
+ conver is    40.1496887      times
+ Enegy is  -9.59940434    
+ norm    8.29331279E-02
+ 
+ Current UP_NUM =            9
+ number         375
+ conver is    25.8445740      times
+ Enegy is  -9.60026455    
+ norm    8.21608976E-02
+ 
+ Current UP_NUM =            9
+ number         376
+ conver is    25.4631042      times
+ Enegy is  -9.60051918    
+ norm    8.19084272E-02
+ 
+ Current UP_NUM =            9
+ number         380
+ conver is    25.9399414      times
+ Enegy is  -9.60165024    
+ norm    8.08985606E-02
+ 
+ Current UP_NUM =            9
+ number         381
+ conver is    24.1279602      times
+ Enegy is  -9.60189152    
+ norm    8.06522071E-02
+ 
+ Current UP_NUM =            9
+ number         382
+ conver is    25.9399414      times
+ Enegy is  -9.60215092    
+ norm    8.04050937E-02
+ 
+ Current UP_NUM =            9
+ number         383
+ conver is    36.8118286      times
+ Enegy is  -9.60251904    
+ norm    8.01494643E-02
+ 
+ Current UP_NUM =            9
+ number         384
+ conver is    16.4031982      times
+ Enegy is  -9.60268307    
+ norm    7.99115300E-02
+ attenution    2.03724112E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         386
+ conver is    22.5067139      times
+ Enegy is  -9.60328197    
+ norm    7.94194415E-02
+ 
+ Current UP_NUM =            9
+ number         387
+ conver is    13.2560730      times
+ Enegy is  -9.60341454    
+ norm    7.91890472E-02
+ attenution    2.03724001E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         388
+ conver is    14.8773193      times
+ Enegy is  -9.60356331    
+ norm    7.89571106E-02
+ 
+ Current UP_NUM =            9
+ number         389
+ conver is    22.7928162      times
+ Enegy is  -9.60379124    
+ norm    7.87195861E-02
+ 
+ Current UP_NUM =            9
+ number         391
+ conver is    27.8472900      times
+ Enegy is  -9.60428905    
+ norm    7.82426894E-02
+ attenution    2.03717873E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         394
+ conver is    18.7873840      times
+ Enegy is  -9.60492897    
+ norm    7.75424913E-02
+ attenution    2.03706343E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         400
+ conver is    30.9944153      times
+ Enegy is  -9.60635471    
+ norm    7.61562511E-02
+ 
+ Current UP_NUM =            9
+ number         402
+ conver is    13.8282776      times
+ Enegy is  -9.60675621    
+ norm    7.57071376E-02
+ 
+ Current UP_NUM =            9
+ number         411
+ conver is    22.9835510      times
+ Enegy is  -9.60866070    
+ norm    7.37153962E-02
+ 
+ Current UP_NUM =            9
+ number         415
+ conver is    8.01086426      times
+ Enegy is  -9.60934448    
+ norm    7.28648528E-02
+ 
+ Current UP_NUM =            9
+ number         417
+ conver is    24.9862671      times
+ Enegy is  -9.60981750    
+ norm    7.24330395E-02
+ 
+ Current UP_NUM =            9
+ number         420
+ conver is    18.8827515      times
+ Enegy is  -9.61045170    
+ norm    7.18009025E-02
+ 
+ Current UP_NUM =            9
+ number         422
+ conver is    20.8854675      times
+ Enegy is  -9.61093044    
+ norm    7.13751093E-02
+ 
+ Current UP_NUM =            9
+ number         423
+ conver is    27.4658203      times
+ Enegy is  -9.61120510    
+ norm    7.11602196E-02
+ 
+ Current UP_NUM =            9
+ number         425
+ conver is    8.20159912      times
+ Enegy is  -9.61143398    
+ norm    7.07616434E-02
+ 
+ Current UP_NUM =            9
+ number         426
+ conver is    33.2832336      times
+ Enegy is  -9.61176682    
+ norm    7.05420971E-02
+ 
+ Current UP_NUM =            9
+ number         427
+ conver is    22.0298767      times
+ Enegy is  -9.61198711    
+ norm    7.03353807E-02
+ 
+ Current UP_NUM =            9
+ number         428
+ conver is    14.2097473      times
+ Enegy is  -9.61212921    
+ norm    7.01374635E-02
+ 
+ Current UP_NUM =            9
+ number         429
+ conver is    22.8881836      times
+ Enegy is  -9.61235809    
+ norm    6.99304491E-02
+ 
+ Current UP_NUM =            9
+ number         431
+ conver is    1.62124634      times
+ Enegy is  -9.61245823    
+ norm    6.95557594E-02
+ 
+ Current UP_NUM =            9
+ number         434
+ conver is    10.9672546      times
+ Enegy is  -9.61286354    
+ norm    6.89773709E-02
+ 
+ Current UP_NUM =            9
+ number         436
+ conver is    25.2723694      times
+ Enegy is  -9.61326408    
+ norm    6.85793385E-02
+ 
+ Current UP_NUM =            9
+ number         437
+ conver is    13.1607056      times
+ Enegy is  -9.61339569    
+ norm    6.83880150E-02
+ 
+ Current UP_NUM =            9
+ number         438
+ conver is    32.8063965      times
+ Enegy is  -9.61372375    
+ norm    6.81774244E-02
+ 
+ Current UP_NUM =            9
+ number         440
+ conver is    20.8854675      times
+ Enegy is  -9.61408710    
+ norm    6.77903146E-02
+ 
+ Current UP_NUM =            9
+ number         441
+ conver is    10.5857849      times
+ Enegy is  -9.61419296    
+ norm    6.76045716E-02
+ 
+ Current UP_NUM =            9
+ number         442
+ conver is    23.0789185      times
+ Enegy is  -9.61442375    
+ norm    6.74078390E-02
+ 
+ Current UP_NUM =            9
+ number         443
+ conver is    22.6974487      times
+ Enegy is  -9.61465073    
+ norm    6.72115088E-02
+ 
+ Current UP_NUM =            9
+ number         445
+ conver is    9.53674316E-02  times
+ Enegy is  -9.61481094    
+ norm    6.68500811E-02
+ 
+ Current UP_NUM =            9
+ number         447
+ conver is    21.3623047      times
+ Enegy is  -9.61518097    
+ norm    6.64724931E-02
+ 
+ Current UP_NUM =            9
+ number         452
+ conver is    17.1661377      times
+ Enegy is  -9.61629009    
+ norm    6.55125305E-02
+ 
+ Current UP_NUM =            9
+ number         454
+ conver is    24.8908997      times
+ Enegy is  -9.61670303    
+ norm    6.51352555E-02
+ 
+ Current UP_NUM =            9
+ number         455
+ conver is    14.0190125      times
+ Enegy is  -9.61684322    
+ norm    6.49557635E-02
+ 
+ Current UP_NUM =            9
+ number         458
+ conver is    14.5912170      times
+ Enegy is  -9.61734962    
+ norm    6.44104555E-02
+ attenution    2.03627069E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         462
+ conver is    20.8854675      times
+ Enegy is  -9.61815166    
+ norm    6.36789873E-02
+ 
+ Current UP_NUM =            9
+ number         463
+ conver is    27.4658203      times
+ Enegy is  -9.61842632    
+ norm    6.34889528E-02
+ 
+ Current UP_NUM =            9
+ number         468
+ conver is    17.3568726      times
+ Enegy is  -9.61896324    
+ norm    6.26434833E-02
+ 
+ Current UP_NUM =            9
+ number         469
+ conver is    15.4495239      times
+ Enegy is  -9.61911774    
+ norm    6.24711700E-02
+ 
+ Current UP_NUM =            9
+ number         473
+ conver is    9.25064087      times
+ Enegy is  -9.61981964    
+ norm    6.17727041E-02
+ 
+ Current UP_NUM =            9
+ number         474
+ conver is    10.4904175      times
+ Enegy is  -9.61992455    
+ norm    6.16077334E-02
+ attenution    2.03640182E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         476
+ conver is    7.72476196      times
+ Enegy is  -9.62017345    
+ norm    6.12742826E-02
+ 
+ Current UP_NUM =            9
+ number         480
+ conver is    13.7329102      times
+ Enegy is  -9.62068939    
+ norm    6.06137030E-02
+ attenution    2.03601327E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         481
+ conver is    12.3977661      times
+ Enegy is  -9.62081337    
+ norm    6.04506545E-02
+ 
+ Current UP_NUM =            9
+ number         484
+ conver is    14.8773193      times
+ Enegy is  -9.62129307    
+ norm    5.99509403E-02
+ 
+ Current UP_NUM =            9
+ number         485
+ conver is    10.3950500      times
+ Enegy is  -9.62139702    
+ norm    5.97918034E-02
+ 
+ Current UP_NUM =            9
+ number         486
+ conver is    11.4440918      times
+ Enegy is  -9.62151146    
+ norm    5.96324578E-02
+ 
+ Current UP_NUM =            9
+ number         487
+ conver is    19.7410583      times
+ Enegy is  -9.62170887    
+ norm    5.94635680E-02
+ 
+ Current UP_NUM =            9
+ number         492
+ conver is    1.62124634      times
+ Enegy is  -9.62229824    
+ norm    5.86763136E-02
+ 
+ Current UP_NUM =            9
+ number         493
+ conver is    21.0762024      times
+ Enegy is  -9.62250900    
+ norm    5.85094206E-02
+ 
+ Current UP_NUM =            9
+ number         496
+ conver is    14.5912170      times
+ Enegy is  -9.62296677    
+ norm    5.80319017E-02
+ 
+ Current UP_NUM =            9
+ number         497
+ conver is    8.20159912      times
+ Enegy is  -9.62304878    
+ norm    5.78821823E-02
+ 
+ Current UP_NUM =            9
+ number         498
+ conver is    20.6947327      times
+ Enegy is  -9.62325573    
+ norm    5.77182025E-02
+ 
+ Current UP_NUM =            9
+ number         499
+ conver is    12.5885010      times
+ Enegy is  -9.62338161    
+ norm    5.75644821E-02
+ 
+ Current UP_NUM =            9
+ number         502
+ conver is    6.00814819      times
+ Enegy is  -9.62371445    
+ norm    5.71132749E-02
+ 
+ Current UP_NUM =            9
+ number         503
+ conver is    12.8746033      times
+ Enegy is  -9.62384319    
+ norm    5.69614135E-02
+ 
+ Current UP_NUM =            9
+ number         505
+ conver is    18.6920166      times
+ Enegy is  -9.62425995    
+ norm    5.66374473E-02
+ 
+ Current UP_NUM =            9
+ number         506
+ conver is    4.38690186      times
+ Enegy is  -9.62430382    
+ norm    5.64987920E-02
+ 
+ Current UP_NUM =            9
+ number         509
+ conver is    6.38961792      times
+ Enegy is  -9.62467384    
+ norm    5.60534671E-02
+ 
+ Current UP_NUM =            9
+ number         510
+ conver is    9.91821289      times
+ Enegy is  -9.62477303    
+ norm    5.59083670E-02
+ 
+ Current UP_NUM =            9
+ number         511
+ conver is    5.53131104      times
+ Enegy is  -9.62482834    
+ norm    5.57697304E-02
+ 
+ Current UP_NUM =            9
+ number         512
+ conver is    11.8255615      times
+ Enegy is  -9.62494659    
+ norm    5.56233302E-02
+ 
+ Current UP_NUM =            9
+ number         513
+ conver is    7.62939453      times
+ Enegy is  -9.62502289    
+ norm    5.54838330E-02
+ 
+ Current UP_NUM =            9
+ number         514
+ conver is    18.1198120      times
+ Enegy is  -9.62520409    
+ norm    5.53301051E-02
+ 
+ Current UP_NUM =            9
+ number         518
+ conver is    12.5885010      times
+ Enegy is  -9.62583733    
+ norm    5.47334068E-02
+ 
+ Current UP_NUM =            9
+ number         519
+ conver is    9.53674316      times
+ Enegy is  -9.62593269    
+ norm    5.45934997E-02
+ 
+ Current UP_NUM =            9
+ number         520
+ conver is    9.05990601      times
+ Enegy is  -9.62602329    
+ norm    5.44557050E-02
+ 
+ Current UP_NUM =            9
+ number         521
+ conver is    23.6511230      times
+ Enegy is  -9.62625980    
+ norm    5.42978272E-02
+ 
+ Current UP_NUM =            9
+ number         522
+ conver is    17.9290771      times
+ Enegy is  -9.62643909    
+ norm    5.41483834E-02
+ 
+ Current UP_NUM =            9
+ number         525
+ conver is    17.4522400      times
+ Enegy is  -9.62665272    
+ norm    5.37466891E-02
+ 
+ Current UP_NUM =            9
+ number         526
+ conver is    17.4522400      times
+ Enegy is  -9.62682724    
+ norm    5.36003560E-02
+ 
+ Current UP_NUM =            9
+ number         528
+ conver is    13.2560730      times
+ Enegy is  -9.62704754    
+ norm    5.33251949E-02
+ 
+ Current UP_NUM =            9
+ number         529
+ conver is    12.4931335      times
+ Enegy is  -9.62717247    
+ norm    5.31863831E-02
+ 
+ Current UP_NUM =            9
+ number         533
+ conver is    14.1143799      times
+ Enegy is  -9.62767982    
+ norm    5.26342392E-02
+ 
+ Current UP_NUM =            9
+ number         534
+ conver is    17.9290771      times
+ Enegy is  -9.62785912    
+ norm    5.24902157E-02
+ 
+ Current UP_NUM =            9
+ number         538
+ conver is    1.04904175      times
+ Enegy is  -9.62829304    
+ norm    5.19566424E-02
+ 
+ Current UP_NUM =            9
+ number         539
+ conver is    27.1797180      times
+ Enegy is  -9.62856483    
+ norm    5.18027097E-02
+ 
+ Current UP_NUM =            9
+ number         542
+ conver is    8.67843628      times
+ Enegy is  -9.62869072    
+ norm    5.14368564E-02
+ 
+ Current UP_NUM =            9
+ number         544
+ conver is    16.3078308      times
+ Enegy is  -9.62895489    
+ norm    5.11704534E-02
+ 
+ Current UP_NUM =            9
+ number         546
+ conver is    6.77108765      times
+ Enegy is  -9.62932968    
+ norm    5.08907363E-02
+ 
+ Current UP_NUM =            9
+ number         551
+ conver is    17.7383423      times
+ Enegy is  -9.62987423    
+ norm    5.02517223E-02
+ 
+ Current UP_NUM =            9
+ number         552
+ conver is    7.82012939      times
+ Enegy is  -9.62995243    
+ norm    5.01291119E-02
+ 
+ Current UP_NUM =            9
+ number         553
+ conver is    13.6375427      times
+ Enegy is  -9.63008881    
+ norm    5.00000082E-02
+ 
+ Current UP_NUM =            9
+ number         554
+ conver is    13.0653381      times
+ Enegy is  -9.63021946    
+ norm    4.98718284E-02
+ 
+ Current UP_NUM =            9
+ number         555
+ conver is    26.6075134      times
+ Enegy is  -9.63048553    
+ norm    4.97253537E-02
+ attenution    2.03370024E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         558
+ conver is    4.00543213      times
+ Enegy is  -9.63077068    
+ norm    4.93592024E-02
+ 
+ Current UP_NUM =            9
+ number         562
+ conver is    28.2287598      times
+ Enegy is  -9.63139534    
+ norm    4.88466807E-02
+ attenution    2.03379039E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         567
+ conver is    4.67300415      times
+ Enegy is  -9.63172722    
+ norm    4.82728668E-02
+ 
+ Current UP_NUM =            9
+ number         568
+ conver is    6.29425049      times
+ Enegy is  -9.63179016    
+ norm    4.81609851E-02
+ 
+ Current UP_NUM =            9
+ number         570
+ conver is    9.15527344      times
+ Enegy is  -9.63202667    
+ norm    4.79211397E-02
+ attenution    2.03381199E-02
+ 
+ 
+ Current UP_NUM =            9
+ number         571
+ conver is    1.14440918      times
+ Enegy is  -9.63203812    
+ norm    4.78174947E-02
+         572
+  -9.63203049    
+ UP_NUM =           10
+ HamilSize      8436285
+ create states
+ chashed IdToInd
+ start raily method
+ 
+ Current UP_NUM =           10
+ number           1
+ conver is    42401.5234      times
+ Enegy is  0.424015224    
+ norm    3.03619838    

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8" />
+        <title>仕様定義書</title>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <h1>変遷</h1>
+        <p>PhysRevB.78.140405 (1).pdfのFIG2の再現を行う</p>
+        <figure>
+            <img src="./image/スクリーンショット 2025-06-25 115038.png" />
+            <figcaption>論文内の再現したいグラフ</figcaption>
+        </figure>
+        <p>
+            このグラフ内のグラフにおけるN=21,N=24の再現に挑む。S<sub>TOT</sub
+            ><sup>Z</sup>-最小エネルギー固有値のグラフの傾きを1/Nを横軸にプロットしたものが、この図である。
+            N=21では0.175,N=24では0.15程度になるはずである。
+        </p>
+        <p>20250712の現状</p>
+        <p>./../output/N=21_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
+        <figure>
+            <img src="./image/スクリーンショット 2025-07-12 075343.png" />
+            <figcaption>論文内の再現したいグラフ(N=21)</figcaption>
+        </figure>
+        <p>./../output/N=24_J=1_D=0.1.txtの情報をExcelにプロットしたものが以下の図である。</p>
+        <figure>
+            <img src="./image/スクリーンショット 2025-07-12 075352.png" />
+            <figcaption>論文内の再現したいグラフ(N=24)</figcaption>
+        </figure>
+        <p>
+            どちらも、傾きが大きく出てしまっている。系の設定なのか、ロジックが違うのか。とりあえずは教授作成のTITPACKと比較検討を進めることとする。
+        </p>
+        <h2>20250715の現状</h2>
+        <p>TITPACkを編集し、N=21型に編集した(./../fotran/s1.f90).その結果の固有値は以下のようになった。 
+        </p>
+        <pre>
+[Eigenvalues]  
+    -18.34455924  -18.22494687  -18.20168844  -18.16449638
+[Iteration number]
+     145
+[Eigenvector components (selected)]
+   0.592526555D-06  -0.389062396D-02  -0.264012252D-02   0.559820572D-02
+   0.187804445D-02  -0.712329915D-03  -0.387651738D-03  -0.502381925D-02
+  -0.835574428D-03  -0.988408383D-04  -0.139999797D-02  -0.322590872D-04
+  -0.412938756D-04  -0.127959407D-03  -0.289226575D-04  -0.117942116D-02
+  -0.131940950D-02  -0.298147851D-03  -0.835697762D-02  -0.321451719D-04
+  -0.136966657D-05
+</pre>
+        <p>この-18.344はoutput/N=21_J=1_D=0.txtのちょうど二倍ずれており、福本教授に問い合わせをすると以下の回答が得られた。</p>
+        <p>TITPACKのハミルトニアンの定義には、交換相互作用が2Jで入っているので、2倍はその違いです。</p>
+        <p>このことなので、ハイゼンベルグ項に問題はなく、ロジックはあってて、系の設定の違いだと断定し、高速化処理を先に解決することとする。
+            高速化が完了したら、取りえるN=21系を全列挙し、チェックしていくとする。</p>
+        <h2>20250728の現状</h2>
+        <p>レイリー商アルゴリズムを用いて自力で実装してみた。パラメーター最適化を二分探索で行ったが、あまり高速化が得られなかった。</p>
+        <p>小林先輩からのアドバイスでH1アルゴリズムを導入してみた(v9)。N=21系においてすべてで30分程度かかっており、まだまだ高速化が必要である。</p>
+        <p>どうやらレイリー商でも線形演算子法でも固有値が他と離れているほど収束が早いようだ。よって以下のようなシフトインバース法を導入してみることとする</p>
+        \beign{align}
+        \mathbb{H}^{\prime} = -(\mathbb{H}-\sigma I)^{-1} 
+        \end{align}
+        <p>この時\(\sigma\)より少し小さいものが強調される。この\(\sigma\)として一つ前の\(Z_{TOT}\)の結果を用いることによって収束を早くできそう。出てきた固有値は以下の式で元の固有値に戻すことが可能</p>
+        \begin{align}
+        \lambda = \frac{-1}{\mu}+\sigma
+        \end{align}
+        <p>逆行列がネックなので当分の目標は線形演算子において逆行列を求める方法を探ること</p>
+        <h1>バージョンについて</h1>
+        <p>本件のソースは以下のバージョン存在する</p>
+        <table>
+            <tr>
+                <th>バージョン</th>
+                <th>仕様</th>
+            </tr>
+            <tr>
+                <td>v1.py</td>
+                <td>全状態2<sup>N</sup>についてハミルトニアンを構成する</td>
+            </tr>
+            <tr>
+                <td>v2.py</td>
+                <td>v1に対して疎行列によるアプローチを追加&rarr; 頓挫</td>
+            </tr>
+            <tr>
+                <td>v3.py</td>
+                <td>全状態ではなくZ<sub>tot</sub>で分割し、計算量の削減</td>
+            </tr>
+            <tr>
+                <td>v4.py</td>
+                <td>v3に対して、疎行列アプローチを導入,外部ファイル出力も導入</td>
+            </tr>
+            <tr>
+                <td>v5.py</td>
+                <td>v4のメモリ削減、高速化を行った</td>
+            </tr>
+            <tr>
+                <td>v6.py</td>
+                <td>線形演算子を導入し、ハミルトニアンの保持を行わないように実装</td>
+            </tr>
+            <tr>
+                <td>v7.py</td>
+                <td>線形演算子は遅かったのでキャッシュを導入(あまり高速にならなかった)</td>
+            </tr>
+            <tr>
+                <td>v8.py</td>
+                <td>
+                    レイリー商を導入し、自力で最小固有値を求められるようにした(一部は高速化したが、パラメーターの最適化が困難)
+                </td>
+            </tr>
+            <tr>
+                <td>v9.py</td>
+                <td>
+                    <a href="研究報告250606.pdf">先行研究</a
+                    >のH<sub>1</sub>のハミルトニアン生成を導入、高速化けが得られた
+                </td>
+            </tr>
+        </table>
+        <h1>系の解説</h1>
+        <h2>サイト数：21の系</h2>
+        <figure>
+            <img src="image/1000000369.png" />
+            <figcaption>N=21のときのサイトの様子</figcaption>
+        </figure>
+        <p>
+            各サイトに対して0~20までの番号と矢印で結合を表している。結合は<a href="../input/N=21.txt">input/N=21.txt</a
+            >で定義されている
+        </p>
+        <h1>物理理論</h1>
+        <p>本件でのハミルトニアンは以下のように定義される</p>
+        \begin{align} \mathscr{H} &= J\sum_{i,j}\boldsymbol{S}_{i}\cdot\boldsymbol{S}_j + \sum_{i,j}
+        D_{i,j}\cdot(\boldsymbol{S}_i\times\boldsymbol{S}_j)\\ &= J\sum_{i,j} S_i^xS_j^x+ S_i^yS_j^y+ S_i^zS_j^z
+        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x) \end{align}
+        <p>ここで昇降演算子を定義し、\(S^x,S^y\)を頑張る</p>
+        \begin{align} S^{+} = S^x + i S^y\\ S^{-} = S^x - i S^y\\ \end{align}
+        <p>したがって</p>
+        \begin{align} S^x = \frac{S^+ + S^-}{2}\\ S^y = \frac{S^+ - S^-}{2i}\\ S^z = i[S_x,S_y] =
+        -\frac{1}{2}[S^+,S^-]\\ \end{align}
+        <p>スピン演算子の積をまとめる</p>
+        \begin{align} S_i^xS_j^x &=\frac{1}{4}(S_i^++S_i^-)(S_j^++S_j^-)\\ &= \frac{1}{4}(S_i^+S_j^+ + S_i^+S_j^- +
+        S_i^-S_j^+ + S_i^-S_j^-)\\ S_i^yS_j^y &=-\frac{1}{4}(S_i^+-S_i^-)(S_j^+-S_j^-)\\ &= \frac{1}{4}(-S_i^+S_j^+ +
+        S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\ S_i^xS_j^y &=\frac{1}{4i}(S_i^++S_i^-)(S_j^+-S_j^-)\\ &=
+        \frac{1}{4i}(S_i^+S_j^+ - S_i^+S_j^- + S_i^-S_j^+ - S_i^-S_j^-)\\ S_i^yS_j^x
+        &=\frac{1}{4i}(S_i^+-S_i^-)(S_j^++S_j^-)\\ &= \frac{1}{4i}(S_i^+S_j^+ + S_i^+S_j^- - S_i^-S_j^+ - S_i^-S_j^-)\\
+        \end{align}
+        <p>それぞれの和に関してもまとめておく</p>
+        \begin{align} S_i^xS_j^x + S_i^yS_j^y = \frac{1}{2}(S_i^+S_j^- + S_i^-S_j^+)\\ S_i^xS_j^y-S_i^yS_j^x =
+        \frac{1}{2i}(-S_i^+S_j^- + S_i^-S_j^+)\\ \end{align}
+        <p>これをハミルトニアンに適用する</p>
+        \begin{align} \mathscr{H} &= J\sum_{i,j} (S_i^xS_j^x+ S_i^yS_j^y+ S_i^zS_j^z)
+        +\sum_{i,j}D_{i,j}^{z}(S_i^xS_j^y-S_i^yS_j^x)\\ &= \frac{J}{2}\sum_{i,j}(S_i^+S_j^- + S_i^-S_j^+) +
+        \frac{J}{4}\sum_{i,j}[S_i^+,S_i^-][S_j^+,S_j^-]\\ & + \sum_{i,j}\frac{D_{i,j}}{2i}(-S_i^+S_j^-+S_i^{-}S_j^+)
+        \end{align}
+        <h2>第一項</h2>
+        <p>
+            i番目とj番目のスピン状態を|&sigma;<sub>i</sub>&sigma;<sub>j</sub>&rang;のケットで表し、第一項に適用すると以下の表になる
+        </p>
+        <table>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>\(\frac{J}{2}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>\(\frac{J}{2}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <h2>第二項</h2>
+        <p>同様に以下の表</p>
+        <table>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>\(\frac{J}{4}\)|&uarr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>-\(\frac{J}{4}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>-\(\frac{J}{4}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>\(\frac{J}{4}\)|&darr;&darr;&rang;</td>
+            </tr>
+        </table>
+        <h2>第三項</h2>
+        <p>同様に以下の表</p>
+        <table>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>\(\frac{D_{ij}}{2i}\)|&darr;&uarr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>-\(\frac{D_{ij}}{2i}\)|&uarr;&darr;&rang;</td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <h2>ハミルトニアン</h2>
+        <p>第1項から3項の結果をまとめる</p>
+        <table>
+            <tr>
+                <th>もとの状態</th>
+                <th>遷移後の状態</th>
+            </tr>
+            <tr>
+                <td>|&uarr;&uarr;&rang;</td>
+                <td>\begin{align}\frac{1}{4}J|&uarr;&uarr;&rang; \end{align}</td>
+            </tr>
+            <tr>
+                <td>|&uarr;&darr;&rang;</td>
+                <td>
+                    \begin{align} -\frac{1}{4}J|&uarr;&darr;&rang; + (\frac{1}{2}J -
+                    \frac{1}{2}iD_{ij})|&darr;&uarr;&rang; \end{align}
+                </td>
+            </tr>
+            <tr>
+                <td>|&darr;&uarr;&rang;</td>
+                <td>
+                    \begin{align} -\frac{1}{4}J|&darr;&uarr;&rang; + (\frac{1}{2}J +
+                    \frac{1}{2}iD_{ij})|&uarr;&darr;&rang; \end{align}
+                </td>
+            </tr>
+            <tr>
+                <td>|&darr;&darr;&rang;</td>
+                <td>\begin{align} \frac{1}{4}J|&darr;&darr;&rang; \end{align}</td>
+            </tr>
+        </table>
+        <h1>コードアルゴリズム</h1>
+        <img src = "./image/フローチャートv9.png"/>
+    </body>
+</html>
+
+<style>
+    pre {
+        font-family: "メイリオ";
+        border: 1px solid;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    h1 {
+        border-left: 5px solid;
+        border-bottom: 5px solid;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    td,
+    th {
+        border: 1px solid;
+        text-align: center;
+        width: 400px;
+    }
+    h2 {
+        border-left: 3px solid;
+    }
+</style>
