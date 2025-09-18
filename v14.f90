@@ -4,7 +4,7 @@ program baseEnegy
 
     !可変部
     real,parameter::J =1.,D = 0.1,accuracy = 1e-5
-    integer,parameter::N = 9,maxSearch = 1
+    integer,parameter::N = 18,maxSearch = 1
     integer,parameter::bond_Num = 2*n
 
     !非可変部-file
@@ -97,7 +97,7 @@ program baseEnegy
                 nCr(l1,l2) = nCr(l1-1,l2-1) + nCr(l1-1,l2)
             end do
         end do
-        do UP_NUM = N,1,-1
+        do UP_NUM = 14,1,-1
             print *,"UP_NUM = ",UP_NUM
             DOWN_NUM = N-UP_NUM
             !逆のときは対称性より計算しない
@@ -194,6 +194,8 @@ program baseEnegy
 
                 !レイリー商反復
                 attenuation = 0.15/(log10(ALL_STATE_NUM*1.0)*0.6)
+                recodeTiming = 0
+                railyrecode(:) = -10001
                 do railyLoop = 1,maxLoops
                     newVecData = (J/4.0) * bond_Num * vecData
                     do bondInd = 1,bond_Num
@@ -283,7 +285,7 @@ program baseEnegy
                         print *,"norm ",nablaRNorm
                     end if 
                     !収束してたら返す
-                    if(nablaRNorm < 0.01)then
+                    if(nablaRNorm < 0.06)then
                         print *,railyLoop
                         railyDivs(UP_NUM) = railyDiv
                         exit
@@ -296,6 +298,18 @@ program baseEnegy
                     end do
                     !正規化
                     vecData = vecData / sqrt(nextVecDataNorm)
+                    !3**Loopごとに収束が指数関数になることを利用して予測値を立てる
+                    if(railyLoop == 3**recodeTiming)then
+                        railyrecode(1) = railyrecode(2)
+                        railyrecode(2) = railyrecode(3)
+                        railyrecode(3) =  railyDiv
+                        if(railyrecode(1) > -10000)then
+                            slop = (railyrecode(3)-railyrecode(2))/(railyrecode(2)-railyrecode(1))
+                            beta = (railyrecode(3)-railyrecode(2))/(slop*slop*(1-slop))
+                            predictReily = railyrecode(1)-beta*slop
+                            print*,railyLoop,predictReily
+                        end if
+                    end if
                 end do
                 !レイリー商反復の終了
                 !最後までいった場合はその時のノルムを返却

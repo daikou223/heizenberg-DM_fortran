@@ -56,7 +56,7 @@ class space():
         self.point = point
 
 def main():
-    target_site = 30
+    target_site = 6
     upperrange = 6
     passedList = []
     os.makedirs(f'./input/N{target_site}', exist_ok=True)
@@ -179,6 +179,8 @@ def main():
                                     newRow = k*arow + l*brow
                                     BSiteId = posToId[(newLine,newRow)]
                                     inputFile.write(f'{ASiteId} {BSiteId} 1\n')
+                            if(aline == 4 and arow == 0 and bline == 0 and brow == 4):
+                                print(posToId)
                             inputFile.close()
                             passedList.append(space(aline,arow,bline,brow))
     if(len(passedList) > 0):

@@ -2,7 +2,7 @@ program baseEnegy
     use, intrinsic :: iso_fortran_env, only: dp => real64
     !可変部
     real,parameter::J =1.,D = 0.1,accuracy = 1e-5
-    integer,parameter::N = 18,maxSearch = 1
+    integer,parameter::N = 6,maxSearch = 1
     integer,parameter::bond_Num = 2*n
     complex,parameter::reaser = 30
     real,parameter::debugNum = 0.01
@@ -71,6 +71,8 @@ program baseEnegy
                 end do
                 print *,"create Chash"
                 initState = random_vec_gene(ALL_STATE_NUM)
+                initState(:) = 0
+                initState(1) = 1 
                 print *,"start raily method"
                 val = raily(initState,ALL_STATE_NUM,accuracy,Bonds,J,D,UP_NUM,restStates,restStatesNum,chashPath,idToIndChash)
                 print *,val
@@ -262,9 +264,10 @@ contains
         r = 0
         beforeR = r
         val = 100
-        Do L1 = 1,maxLoops
+        Do L1 = 1,1
             !HXを計算する
             newVec = Hamil(beforeVec,Bonds,J,D,veclength,UP_NUM,restStates,restStatesNum,idToIndChash)
+            print *,newVec
             !収束条件用に一つ前のエネルギーを保管しておく
             beforeR = r
             r = 0

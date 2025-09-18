@@ -5,7 +5,7 @@ program baseEnegy
 
     !可変部
     real,parameter::J =1.,D = 0.1,accuracy = 1e-5
-    integer,parameter::N = 30,maxSearch = 1
+    integer,parameter::N = 6,maxSearch = 1
     integer,parameter::bond_Num = 2*N
 
     !非可変部-file
@@ -38,12 +38,21 @@ program baseEnegy
     real::railyDiv,nablaRNorm,nextVecDataNorm,attenuation,innerRate
     integer:: state, fripState, maxMask, minMask, restMask
     integer(8):: maxMask_, minMask_, restMask_
+    integer::mask,key,upperUseKey
 
     !非可変部-乱数
     real :: a,b,rand
 
     !非可変部-chash
     integer::nCr(0:N,0:N)
+    integer,allocatable::idToInd(:)
+    integer,parameter::collapseList(55) =  [ 527744199 , 956575440, 496739444,670680204,111485899,530512614,&
+     147420730, 970446391, 331698202, 571882804, 242025422, 864200478, 961745359, 755734019, &
+     503753589, 381178730, 902675107, 351434920, 489318112, 539076824, 294007524, 34155980, &
+     692702580, 601487816, 623492890, 686261039, 883346590, 1066239057, 1054396908, 621034762,&
+      1037879269, 196138108, 979317313, 133899874, 206149928, 954313712, 74069865, 90810165, &
+      700190095, 109179671, 843423738, 526934554, 425697326, 444232068, 545474910, 684040096,&
+       1027339630, 1006583862, 690409966, 631407572, 537654983, 158950028, 566370613, 628623012, 412664663]
 
     !非可変部-tmp変数
     integer::tmpnCr,tmpBeforeStatesCounter,tmpStatesCounter
@@ -56,11 +65,12 @@ program baseEnegy
     integer :: start_count, end_count, rate, count_max, times(N)
 
     !非可変部-debug
-    integer::testnum
+    integer::testnum,beforeInd,afterInd
     complex,allocatable::testVec(:),testInitVec(:)
 
     !処理はじめ**************************************
     !周期境界条件List.txtから取得
+    allocate(idToInd(0:2**(N-2)-1))
     write(tmpChar,'(I2)') N
     inputPath = "./input/N" // trim(adjustl(tmpchar)) // "/List.txt"
     open(unit=10, file=inputPath, status="old")
@@ -141,9 +151,47 @@ program baseEnegy
                     tmpBeforeStates = tmpStates
                     tmpBeforeStatesCounter = tmpStatesCounter
                 end do
+                idToInd(:) = -1
+                upperUseKey = 0
                 do l1 = 1,ALL_STATE_NUM
                     states(l1) = tmpStates(l1,1) 
+                    key = ishft(states(l1),-2)
+                    mask = ishft(1,N-2)-1
+                    do L2 = 1,size(collapseList)
+                        if(idToInd(key) > 0) then
+                            key = ieor(ishft(states(l1),-2),iand(mask,collapseList(L2)))
+                            if(l2 > upperUseKey) then
+                                print *,"DangerousUseKey:",l2
+                                upperUseKey = l2
+                            end if
+                        else 
+                            exit
+                        end if
+                    end do
+                    if (l2-1 == size(collapseList))then
+                        print *,"key wither"
+                        print *,testvec(100)
+                    end if
+                    idToInd(key) = l1
                 end do
+                !テスト*********************************************************************
+                ! print*,"test"
+                ! mask = (ishft(1,N))-1
+                ! do l1 = 1,ALL_STATE_NUM
+                !     print *,states(l1)
+                !     if(idToInd(ishft(states(l1),-2)) < ALL_STATE_NUM) then
+                !         print *,"stetas(",idtoind(ishft(states(l1),-2)),") = ",states(idtoind(ishft(states(l1),-2))),"1"
+                !     else
+                !         beforeInd =  ishft(idToInd(ishft(states(l1),-2)),-N)
+                !         afterInd =  iand(idToInd(ishft(states(l1),-2)),mask)
+                !         if(states(beforeInd) == states(l1)) then
+                !             print *,"stetas(",beforeInd,") = ",states(beforeInd),"2"
+                !         else
+                !             print *,"stetas(",afterInd,") = ",states(afterInd),"3"
+                !         end if
+                !     end if
+                ! end do
+                !********************************************************
                 print *,"created state"
                 !残状態を作る
                 restStatesNum = nCr(N-2,UP_NUM-1)
@@ -208,7 +256,6 @@ program baseEnegy
                         beforeSite = Bonds(bondInd,1)
                         afterSite = Bonds(bondInd,2)
                         mod = Bonds(bondInd,3)
-                        print *,"get band"
                         !minSiteの影響で一つずれるから
                         maxSite = max(beforeSite,Aftersite)-1
                         minSite = min(beforeSite,Aftersite)
@@ -216,7 +263,6 @@ program baseEnegy
                         restMask = (ishft(1,minSite))-1
                         minMask = (ishft(1,maxSite))-1-restMask
                         maxMask = (ishft(1,N))-1-minMask-restmask
-                        print *,"create mask"
                         do restStatesInd = 1,restStatesNum
                             !実際の入れ込み
                             state = iand(restStates(reststatesInd),maxMask)*4 + iand(restStates(reststatesInd),minMask)*2 +&
@@ -225,83 +271,30 @@ program baseEnegy
                             fripState = iand(restStates(reststatesInd),maxMask)*4 + iand(restStates(reststatesInd),minMask)*2 +&
                             iand(restStates(reststatesInd),restMask)
                             fripstate = ibset(fripState,afterSite)
-                            !それらがstateのどこにいるかを改良型二部探索
                             !まずはstateのほうから
-                            maxStateInd = ALL_STATE_NUM
-                            minStateInd = 1
-                            do l1 = 1,100
-                                if(maxStateInd <= minStateInd .or. state ==states(maxStateInd)) then
-                                    stateInd = maxStateInd
+                            mask = (ishft(1,N-2))-1
+                            key = (ishft(state,-2))
+                            do l1 = 1,size(collapseList)
+                                if(States(idToInd(key)) == state) then
                                     exit
+                                else
+                                    key = ieor(ishft(state,-2),iand(mask,collapseList(L1)))
                                 end if
-                                innerRate =  real(state-states(minStateInd))/&
-                                    real(states(maxStateInd)-states(minStateInd))
-                                predictStateInd = int(innerRate*(maxStateInd-minStateInd)) + minStateInd
-                                if(predictStateInd > ALL_STATE_NUM .or. predictStateInd <= 0) then
-                                    print *,"state"
-                                    print *,reststates(restStatesInd)
-                                    print *,beforeSite
-                                    print *,afterSite
-                                    print *,"-----------------------------"
-                                    print *,maxMask
-                                    print *,minMask
-                                    print *,"-----------------------------"
-                                    print *,reststates(restStatesInd)
-                                    print *,states(minStateInd)
-                                    print *,states(maxStateInd)
-                                    print *,states(maxStateInd+1)
-                                    print *,state
-                                    print *,innerRate
-                                    print *,innerRate*(maxStateInd-minStateInd)
-                                    print *,predictStateInd
-                                end if
-                                if(predictStateInd > ALL_STATE_NUM .or. predictStateInd <= 0) then
-                                    print *,innerRate
-                                    print *,innerRate*(maxStateInd-minStateInd)
-                                    print *,predictStateInd
-                                end if
-                                if(state == states(predictStateInd)) then
-                                    stateInd = predictStateInd
-                                    exit
-                                else if(state < states(predictStateInd)) then
-                                    stateInd = predictStateInd-1
-                                else if(state > states(predictStateInd)) then
-                                    stateInd = predictStateInd+1
-                                end if
-                            end do
+                            end do 
+                            stateInd = idToInd(key)
                             !fripstateのほう
-                            maxStateInd = ALL_STATE_NUM
-                            minStateInd = 1
-                            do l1 = 1,100
-                                if(maxStateInd <= minStateInd .or. fripState ==states(maxStateInd)) then
-                                    fripStateInd = maxStateInd
+                            key = (ishft(fripState,-2))
+                            do l1 = 1,size(collapseList)
+                                if(States(idToInd(key)) == fripState) then
                                     exit
+                                else
+                                    key = ieor(ishft(fripState,-2),iand(mask,collapseList(L1)))
                                 end if
-                                innerRate =  real(fripState-states(minStateInd))/&
-                                    real(states(maxStateInd)-states(minStateInd))
-                                predictStateInd = int(innerRate*(maxStateInd-minStateInd)) + minStateInd
-                                if(predictStateInd > ALL_STATE_NUM .or. predictStateInd <= 0) then
-                                    print *,"fripstate"
-                                    print *,states(minStateInd)
-                                    print *,states(maxStateInd)
-                                    print *,states(maxStateInd+1)
-                                    print *,fripstate
-                                    print *,innerRate
-                                    print *,innerRate*(maxStateInd-minStateInd)
-                                    print *,predictStateInd
-                                end if
-                                if(fripState == states(predictStateInd)) then
-                                    fripStateInd = predictStateInd
-                                    exit
-                                else if(fripState < states(predictStateInd)) then
-                                    maxStateInd = predictStateInd-1
-                                else if(fripState > states(predictStateInd)) then
-                                    minStateInd = predictStateInd+1
-                                end if
-                            end do
+                            end do 
+                            fripStateInd = idToInd(key)
                             if(stateInd < 1 .or. stateInd > ALL_STATE_NUM .or. fripStateInd < 1 .or. &
                              fripStateInd > ALL_STATE_NUM) then
-                                print *,stateInd,fripStateInd
+                                print *,stateInd,fripStateInd,state,fripState
                             end if
                             !行列演算をする
                             newVecData(stateInd)     = newVecData(stateInd)-0.5 * J * vecData(stateInd)
@@ -314,23 +307,20 @@ program baseEnegy
                         !ボンド固定、のこりのstateで回し終わり
                     end do
                     !ボンド動かし終わり
-                    print *,"end bond"
                     !レイリー商の計算
                     railyDiv = 0
                     Do l1 = 1,ALL_STATE_NUM
                         railyDiv = railyDiv + conjg(vecData(l1))*newVecData(l1)
                     end Do
-                    print *,"end raily"
                     !残差ベクトルのノルム
                     nablaRNorm = 0
                     Do l1 = 1,ALL_STATE_NUM
                         nablaRNorm = nablaRNorm + abs(newVecData(l1)-railyDiv*vecData(l1))**2
                     end Do
                     nablaRNorm = sqrt(nablaRNorm)
-                    print *,"end nablaR"
                     !収束してない場合たまにaccuracyの何倍かを教える
                     call random_number(rand) 
-                    if(rand < ALL_STATE_NUM/(10.0**7.0))then
+                    if(rand < ALL_STATE_NUM/(10.0**7.0) .or. railyLoop == 1)then
                         print *,""
                         print *,"attenution",attenuation
                         print *,"Current UP_NUM = ",UP_NUM
@@ -339,7 +329,9 @@ program baseEnegy
                         print *,"norm ",nablaRNorm
                     end if 
                     !収束してたら返す
-                    if(nablaRNorm < 0.05)then
+                    if(nablaRNorm < 0.003)then
+                        print*,(railyDiv)
+                        print*,(railyLoop)
                         railyDivs(UP_NUM) = railyDiv
                         exit
                     end if
@@ -362,7 +354,7 @@ program baseEnegy
             end if
             !UP_NUM <= DOWN_NUMのif
         end do
-        print *,railyDivs
+        print *,"enegys:",railyDivs
 
         call system_clock(end_count)
         print *, "Execution time (wall): ", real(end_count - start_count) / real(rate), " seconds"
